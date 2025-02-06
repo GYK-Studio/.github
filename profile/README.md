@@ -24,7 +24,7 @@ Bienvenidos al repositorio oficial de **GYK-Studios**, una organización dedicad
 ## 👥 **Equipo**  
 | [<img src="https://github.com/Kokuuuuuun.png" width=100><br>**Kokuuuuuun**](https://github.com/Kokuuuuuun) | [<img src="https://github.com/plataer.png" width=100><br>**plataer**](https://github.com/plataer) | [<img src="https://github.com/yoscarmjp.png" width=100><br>**yoscarmjp**](https://github.com/yoscarmjp) |  
 | :---: | :---: | :---: |  
-| *Líder & Full-Stack* | *Desarrollador Minecraft* | *Diseñador Web* |  
+| *Desarrollador* | *Desarrollador* | *desarrollador y diseñador* |  
 
 ---  
 
