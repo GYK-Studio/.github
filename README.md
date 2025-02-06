@@ -3,44 +3,30 @@
 
 ![Logo Placeholder](https://via.placeholder.com/150x50?text=GYK-Studios+Logo)  
 
-Bienvenidos al repositorio oficial de **GYK-Studios**, una organización dedicada a crear soluciones creativas en desarrollo web, plugins de Minecraft y proyectos innovadores. ¡Trabajamos en equipo para ofrecer productos de calidad!  
+Bienvenidos al repositorio oficial de **GYK-Studios**, una organización dedicada a la creación de soluciones digitales en diversas áreas. Nos apasiona la innovación y trabajamos en equipo para desarrollar proyectos de calidad.  
 
----
+---  
 
 ## 🌟 **¿Qué hacemos?**  
 - 🖥️ **Desarrollo Web**: Sitios modernos y responsivos.  
-- 🎮 **Plugins de Minecraft**: Personalización para servidores (Spigot/Bukkit/PaperMC).  
-- 🔧 **Proyectos Varios**: Automatizaciones, herramientas y aplicaciones creativas.  
+- ⛏️ **Plugins de Minecraft**: Personalización para servidores (Spigot/Bukkit/PaperMC).  
+- 🔧 **Proyectos Varios**: Automatizaciones, herramientas, bots, aplicaciones creativas y mucho más.  
 
----
-
-## 🛠️ **Proyectos Destacados**  
-### 🌐 Desarrollo Web  
-- [Sitio de Ejemplo](https://github.com/GYK-Studios/ejemplo-web) - Landing page moderna con React.  
-- [Tienda Online](https://github.com/GYK-Studios/tienda-ejemplo) - E-commerce con Node.js y MongoDB.  
-
-### ⛏️ Plugins de Minecraft  
-- [SkyblockPro](https://github.com/GYK-Studios/SkyblockPro) - Sistema avanzado de Skyblock.  
-- [CustomPvP](https://github.com/GYK-Studios/CustomPvP) - Kit de personalización para PvP.  
-
-### 🔨 Otros Proyectos  
-- [DiscordBot-Template](https://github.com/GYK-Studios/DiscordBot) - Bot modular para comunidades.  
-
----
+---  
 
 ## 💻 **Tecnologías Usadas**  
 - **Web**: HTML/CSS, JavaScript, React, Node.js  
 - **Minecraft**: Java, Spigot API, Maven  
 - **Herramientas**: Git, Figma, IntelliJ IDEA  
 
----
+---  
 
 ## 👥 **Equipo**  
-| [<img src="https://via.placeholder.com/100" width=100><br>**Tu Nombre**](https://github.com/tuperfil) | [<img src="https://via.placeholder.com/100" width=100><br>**Amigo 1**](https://github.com/amigo1) | [<img src="https://via.placeholder.com/100" width=100><br>**Amigo 2**](https://github.com/amigo2) |  
+| [<img src="https://github.com/Kokuuuuuun.png" width=100><br>**Kokuuuuuun**](https://github.com/Kokuuuuuun) | [<img src="https://github.com/plataer.png" width=100><br>**plataer**](https://github.com/plataer) | [<img src="https://github.com/yoscarmjp.png" width=100><br>**yoscarmjp**](https://github.com/yoscarmjp) |  
 | :---: | :---: | :---: |  
 | *Líder & Full-Stack* | *Desarrollador Minecraft* | *Diseñador Web* |  
 
----
+---  
 
 ## 🤝 **¿Cómo contribuir?**  
 1. Clona el repositorio: `git clone https://github.com/GYK-Studios/proyecto.git`  
@@ -49,18 +35,14 @@ Bienvenidos al repositorio oficial de **GYK-Studios**, una organización dedicad
 4. Haz push: `git push origin feature/nueva-funcion`  
 5. Abre un **Pull Request** y ¡listo!  
 
----
+---  
 
 ## 📄 **Licencia**  
 Los proyectos están bajo licencia MIT. Para plugins de Minecraft, verifica la licencia específica en cada repositorio.  
 
----
+---  
 
 ## 📩 **Contacto**  
 ¿Tienes una idea? ¡Colaboremos!  
 📧 Email: contacto@gykstudios.com (ejemplo)  
 🔗 [Sitio Web](https://gykstudios.com) (próximamente)  
-
----
-
-✨ **"La innovación distingue a los líderes de los seguidores"** - Steve Jobs  
