@@ -1,10 +1,10 @@
 # 🚀 GYK-Studios 
 **Innovando en el mundo digital y más allá**  
 
-([https://via.placeholder.com/150x50?text=GYK-Studios+Logo](https://avatars.githubusercontent.com/u/191543244?s=200&v=4)
+[<img src="https://avatars.githubusercontent.com/u/191543244?s=200&v=4">]
 
 Bienvenidos al repositorio oficial de **GYK-Studios**, una organización dedicada a la creación de soluciones digitales en diversas áreas. Nos apasiona la innovación y trabajamos en equipo para desarrollar proyectos de calidad.  
-
+ 
 ---  
 
 ## 🌟 **¿Qué hacemos?**  
