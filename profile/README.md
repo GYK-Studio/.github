@@ -44,5 +44,5 @@ Los proyectos están bajo licencia MIT. Para plugins de Minecraft, verifica la l
 
 ## 📩 **Contacto**  
 ¿Tienes una idea? ¡Colaboremos!  
-📧 Email: contacto@gykstudios.com (ejemplo)  
+📧 Email: contacto@gykstudios.tech (ejemplo)  
 🔗 [Sitio Web](https://gykstudios.com) (próximamente)  
