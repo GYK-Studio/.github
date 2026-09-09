@@ -1,104 +1,93 @@
+<!-- =========================================================
+     GYK STUDIO — ORGANIZATION PROFILE
+     ========================================================= -->
+
 <div align="center">
 
-<img src="https://avatars.githubusercontent.com/u/191543244?s=200&v=4" width="160" alt="GYK Studio Logo">
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=210&color=0:0D1117,45:1F6FEB,100:7C3AED&text=GYK%20STUDIO&fontColor=ffffff&fontSize=48&fontAlignY=36&desc=Ideas%20%E2%86%92%20Code%20%E2%86%92%20Experiences&descAlignY=57&animation=fadeIn" alt="GYK Studio banner"/>
+
+<img src="https://avatars.githubusercontent.com/u/191543244?s=200&v=4" width="130" alt="GYK Studio Logo"/>
+
+<br><br>
+
+Building digital experiences beyond the ordinary.
+
+Software · Web · Gaming · Infrastructure · Automation · Open Source
+
+<br>
+
+<a href="https://github.com/GYK-Studio">
+  <img src="https://img.shields.io/badge/GitHub-GYK--Studio-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+</a>
+<a href="https://github.com/orgs/GYK-Studio/repositories">
+  <img src="https://img.shields.io/badge/Explore-Repositories-1F6FEB?style=for-the-badge&logo=github&logoColor=white" alt="Repositories"/>
+</a>
+<img src="https://img.shields.io/badge/Open%20Source-Projects-2EA043?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="Open Source"/>
+<img src="https://img.shields.io/badge/Dominican%20Republic-🇩🇴-CE1126?style=for-the-badge" alt="Dominican Republic"/>
+
+<br><br>
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=19&duration=3200&pause=900&color=58A6FF&center=true&vCenter=true&width=720&lines=We+build+things+we+want+to+use.;Web%2C+tools%2C+gaming+and+self-hosted+software.;Experiment.+Build.+Improve.+Repeat." alt="Typing SVG"/>
+
+</div>
+
+✦ Who we are
+
+<table>
+<tr>
+<td width="62%" valign="top">
 
 🚀 GYK Studio
 
-Innovando en el mundo digital y más allá.
+Somos un equipo que convierte ideas en software real.
 
-Software • Web • Gaming • Open Source • Automatización • Infraestructura
+Construimos proyectos propios, herramientas, experiencias web y soluciones experimentales mientras exploramos nuevas tecnologías y mejoramos continuamente nuestra forma de crear.
 
-<br>
+No estamos atados a un único lenguaje, framework o plataforma.
 
+Elegimos la tecnología según el problema, no el problema según la tecnología.
 
+</td>
+<td width="38%" valign="top">
 
+⚡ En pocas palabras
 
-
-
-</div>
-
-👋 Sobre GYK Studio
-
-GYK Studio es una organización dedicada al desarrollo de software, creación de herramientas digitales y experimentación con nuevas tecnologías.
-
-Nuestro objetivo es transformar ideas en proyectos funcionales, útiles y modernos mientras aprendemos, colaboramos y exploramos diferentes áreas del desarrollo.
-
-Trabajamos en proyectos relacionados con:
-
-🌐 Desarrollo web
-
-⚙️ Backend y APIs
-
-📺 Aplicaciones multiplataforma
-
+🌐 Web & Apps
+⚙️ Backend & APIs
 🎮 Gaming
-
 ⛏️ Minecraft
+☁️ Self-hosting
+🐳 Containers
+🤖 Automation
+🎨 UI / UX
+🧪 Experiments
 
-🤖 Automatización
+</td>
+</tr>
+</table>
 
-☁️ Infraestructura
-
-🐳 Contenedores
-
-🛠️ Herramientas para desarrolladores
-
-🧪 Proyectos experimentales
-
-🔓 Open Source
-
-Ideas → Código → Experiencias
-
-💡 ¿Qué hacemos?
+◈ What we build
 
 <table>
 <tr>
 
 <td width="50%" valign="top">
 
-🌐 Desarrollo Web
+🌐 Web & Applications
 
-Creamos aplicaciones y experiencias modernas para navegadores y diferentes dispositivos.
+Interfaces modernas, aplicaciones web y experiencias diseñadas para múltiples dispositivos.
 
-Aplicaciones web
-
-Interfaces responsivas
-
-Progressive Web Apps
-
-Dashboards
-
-Paneles administrativos
-
-Sistemas frontend
-
-Aplicaciones multiplataforma
-
-Integraciones con servicios externos
+Frontend · Responsive UI · Smart TV · PWA
 
 </td>
 
 <td width="50%" valign="top">
 
-⚙️ Backend & APIs
+⚙️ Backend & Services
 
-Desarrollamos servicios que permiten conectar nuestras aplicaciones y sistemas.
+APIs, autenticación, bases de datos, integraciones y servicios que conectan nuestros productos.
 
-REST APIs
-
-Servicios backend
-
-Autenticación
-
-Bases de datos
-
-Integraciones
-
-Microservicios
-
-Sistemas self-hosted
-
-Servicios internos
+REST APIs · Databases · Auth · Services
 
 </td>
 
@@ -108,43 +97,21 @@ Servicios internos
 
 <td width="50%" valign="top">
 
-🎮 Gaming
+🎮 Gaming & Minecraft
 
-También desarrollamos y experimentamos con tecnologías relacionadas con videojuegos.
+Herramientas, plugins, servidores y proyectos experimentales relacionados con videojuegos.
 
-Herramientas
-
-Integraciones
-
-Servidores
-
-Plugins
-
-Sistemas personalizados
-
-Proyectos relacionados con gaming
+Minecraft · Spigot · Paper · Tools
 
 </td>
 
 <td width="50%" valign="top">
 
-⛏️ Minecraft
+☁️ Infrastructure
 
-Creamos y modificamos herramientas relacionadas con servidores de Minecraft.
+Despliegue, automatización y servicios self-hosted para ejecutar nuestros proyectos.
 
-Plugins
-
-Spigot
-
-Bukkit
-
-PaperMC
-
-Integraciones
-
-Automatizaciones
-
-Herramientas para servidores
+Docker · Linux · CI/CD · Reverse Proxy
 
 </td>
 
@@ -154,507 +121,292 @@ Herramientas para servidores
 
 <td width="50%" valign="top">
 
-🤖 Automatización
+🤖 Automation
 
-Intentamos convertir tareas repetitivas en procesos automáticos.
+Bots, scripts y utilidades creadas para automatizar tareas y conectar sistemas.
 
-Bots
-
-Scripts
-
-Herramientas internas
-
-Automatización de procesos
-
-Integraciones con APIs
-
-Utilidades para desarrolladores
+Bots · Scripts · Integrations · Tooling
 
 </td>
 
 <td width="50%" valign="top">
 
-☁️ Infraestructura
+🧪 Labs
 
-Experimentamos con distintas tecnologías para desplegar y mantener nuestros proyectos.
+Prototipos, pruebas de concepto y proyectos donde simplemente preguntamos:
 
-Docker
-
-Linux
-
-Self-hosting
-
-Reverse proxies
-
-Redes
-
-CI/CD
-
-Servicios web
-
-Contenedores
+“¿Y si intentamos esto?”
 
 </td>
 
 </tr>
-
-<tr>
-
-<td width="50%" valign="top">
-
-🎨 Diseño
-
-El diseño también forma parte del desarrollo de nuestros proyectos.
-
-Interfaces
-
-UX/UI
-
-Prototipos
-
-Diseño de aplicaciones
-
-Identidad visual
-
-Experiencias para distintos dispositivos
-
-</td>
-
-<td width="50%" valign="top">
-
-🧪 Experimentación
-
-No todos nuestros repositorios tienen que comenzar como grandes productos.
-
-También trabajamos en:
-
-Prototipos
-
-Conceptos
-
-Pruebas
-
-Experimentos
-
-Herramientas pequeñas
-
-Nuevas tecnologías
-
-</td>
-
-</tr>
-
 </table>
 
-📦 Repositorios
+◉ Repositories
 
-Los repositorios de GYK Studio se dividen principalmente en dos categorías:
+<div align="center">
 
-🚀 Proyectos
+<table>
+<tr>
 
-Software creado y desarrollado directamente por nuestro equipo.
+<td align="center" width="50%">
 
-🍴 Forks
+🚀 ORIGINAL PROJECTS
 
-Copias derivadas de proyectos externos utilizadas para modificaciones, experimentación, contribuciones o adaptaciones.
+<br>
 
-Un repositorio que sea un fork no se presenta como un proyecto original de GYK Studio.
+Software creado y desarrollado originalmente por GYK Studio.
 
-🚀 Proyectos propios
+<br>
+
+<a href="https://github.com/orgs/GYK-Studio/repositories">
+<img src="https://img.shields.io/badge/VIEW-PROJECTS-238636?style=for-the-badge&logo=github&logoColor=white" alt="View projects"/>
+</a>
+
+</td>
+
+<td align="center" width="50%">
+
+🍴 FORKS
+
+<br>
+
+Repositorios derivados de proyectos externos para adaptar, experimentar, corregir o contribuir.
+
+<br>
+
+<a href="https://github.com/orgs/GYK-Studio/repositories">
+<img src="https://img.shields.io/badge/VIEW-FORKS-8957E5?style=for-the-badge&logo=git&logoColor=white" alt="View forks"/>
+</a>
+
+</td>
+
+</tr>
+</table>
+
+</div>
+
+[!IMPORTANT]
+Si un repositorio de la organización aparece en GitHub como “forked from …”, lo consideramos un Fork, no un proyecto original de GYK Studio.
+
+★ Featured
+
+<table>
+<tr>
+<td width="100%" valign="top">
 
 🎬 Nuvio Web
 
-Nuvio Web es uno de los principales proyectos desarrollados dentro de GYK Studio.
+Una experiencia multimedia TV-first, pensada para navegadores y plataformas de Smart TV.
 
-Está enfocado en proporcionar una experiencia multimedia moderna desde tecnologías web y diferentes plataformas.
+<p>
+<img src="https://img.shields.io/badge/Web-App-1F6FEB?style=flat-square" alt="Web App"/>
+<img src="https://img.shields.io/badge/TV-First-8957E5?style=flat-square" alt="TV First"/>
+<img src="https://img.shields.io/badge/Remote-Navigation-2EA043?style=flat-square" alt="Remote Navigation"/>
+<img src="https://img.shields.io/badge/Self--Hosted-DB6D28?style=flat-square" alt="Self Hosted"/>
+</p>
 
-Algunas de las áreas que forman parte de su desarrollo incluyen:
+Áreas principales: interfaces para TV, navegación con control remoto, reproducción multimedia, integraciones, backend e infraestructura.
 
-🌐 Aplicación web
+<a href="https://github.com/GYK-Studio/NuvioWeb">
+<img src="https://img.shields.io/badge/Open%20Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="Open Nuvio Web"/>
+</a>
 
-📺 Interfaces para televisores
+</td>
+</tr>
+</table>
 
-🎮 Navegación mediante control remoto
-
-⚙️ Backend
-
-🔐 Autenticación
-
-🧩 Plugins e integraciones
-
-📦 Empaquetado para diferentes plataformas
-
-🐳 Infraestructura mediante contenedores
-
-☁️ Servicios self-hosted
-
-👉 Repositorio
-
-https://github.com/GYK-Studio/NuvioWeb
-
-🍴 Forks
-
-GYK Studio también mantiene forks cuando necesitamos modificar o experimentar con proyectos creados originalmente por otros desarrolladores.
-
-Un fork puede utilizarse para:
-
-🔧 Realizar modificaciones
-
-🧪 Experimentar con nuevas funcionalidades
-
-🐛 Corregir errores
-
-🔀 Preparar contribuciones
-
-📦 Mantener una versión personalizada
-
-🔌 Añadir integraciones
-
-🧠 Estudiar una implementación
-
-🚀 Adaptar software a nuestra infraestructura
-
-Los forks siempre mantienen la relación con su repositorio original.
-
-GitHub indica automáticamente esta relación utilizando:
-
-forked from usuario/repositorio
-
-Por lo tanto:
-
-Repositorio creado por GYK Studio
-        ↓
-🚀 Proyecto
-
-Mientras que:
-
-Repositorio derivado de otro repositorio
-        ↓
-🍴 Fork
-
-🔎 Explorar repositorios
-
-Puedes encontrar todos nuestros proyectos, forks y experimentos en:
-
-📦 Repositorios de GYK Studio
-
-https://github.com/orgs/GYK-Studio/repositories
-
-🧰 Tecnologías
-
-Utilizamos diferentes tecnologías dependiendo de las necesidades de cada proyecto.
+◇ Tech stack
 
 <div align="center">
 
-🌐 Web
+Languages & Web
 
-<img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nodejs" alt="Web Technologies">
+<img src="https://skillicons.dev/icons?i=html,css,js,ts,python,java&perline=12" alt="Languages"/>
 
-<br>
+<br><br>
 
-⚙️ Backend
+Frameworks, Runtime & Data
 
-<img src="https://skillicons.dev/icons?i=nodejs,python,java,postgres,supabase" alt="Backend Technologies">
+<img src="https://skillicons.dev/icons?i=react,nodejs,postgres,supabase&perline=12" alt="Frameworks and databases"/>
 
-<br>
+<br><br>
 
-☁️ Infraestructura
+Infrastructure & Tools
 
-<img src="https://skillicons.dev/icons?i=docker,linux,nginx,cloudflare" alt="Infrastructure">
-
-<br>
-
-🛠️ Desarrollo
-
-<img src="https://skillicons.dev/icons?i=git,github,vscode,idea,bash" alt="Development Tools">
-
-<br>
-
-🎨 Diseño
-
-<img src="https://skillicons.dev/icons?i=figma" alt="Design">
+<img src="https://skillicons.dev/icons?i=docker,linux,nginx,cloudflare,git,github,vscode,idea,figma,bash&perline=12" alt="Tools"/>
 
 </div>
 
-🏗️ Nuestra filosofía
-
-🧠 Aprender construyendo
-
-Creemos que una de las mejores maneras de aprender una tecnología es utilizarla para crear algo real.
-
-No solamente estudiamos herramientas:
-
-las utilizamos.
-
-🧪 Experimentar
-
-Nos gusta probar nuevas ideas y tecnologías.
-
-Un proyecto no necesita comenzar siendo enorme.
-
-Muchas veces puede comenzar simplemente con:
-
-"¿Y si hacemos esto?"
-
-y terminar convirtiéndose en algo mucho más grande.
-
-🤝 Colaborar
-
-Trabajar en equipo nos permite:
-
-Compartir conocimientos
-
-Encontrar mejores soluciones
-
-Revisar código
-
-Dividir responsabilidades
-
-Aprender unos de otros
-
-Construir proyectos más grandes
-
-🔓 Open Source
-
-Creemos en compartir conocimiento.
-
-Cuando un proyecto lo permite, intentamos hacer que nuestro código pueda ser:
-
-estudiado;
-
-probado;
-
-mejorado;
-
-modificado;
-
-y utilizado por otras personas.
-
-📈 Mejorar constantemente
-
-El software siempre puede evolucionar.
-
-Constantemente buscamos mejorar:
-
-Código
-
-Rendimiento
-
-Diseño
-
-Arquitectura
-
-Experiencia de usuario
-
-Documentación
-
-Infraestructura
-
-👥 Equipo
-
-GYK Studio está formado por desarrolladores y colaboradores que participan en diferentes áreas de nuestros proyectos.
+👥 The team
 
 <div align="center">
 
 <table>
-
 <tr>
 
-<td align="center" width="190">
-
+<td align="center" width="180">
 <a href="https://github.com/Kokuuuuuun">
-<img src="https://github.com/Kokuuuuuun.png" width="115" alt="Kokuuuuuun">
-<br>
+<img src="https://github.com/Kokuuuuuun.png" width="105" alt="Kokuuuuuun"/><br>
 <strong>Kokuuuuuun</strong>
 </a>
-
 <br><br>
-
-👑 Owner
-
+<img src="https://img.shields.io/badge/OWNER-8957E5?style=flat-square" alt="Owner"/>
+<br>
 <sub>Developer</sub>
-
 </td>
 
-<td align="center" width="190">
-
+<td align="center" width="180">
 <a href="https://github.com/yoscarmjp">
-<img src="https://github.com/yoscarmjp.png" width="115" alt="yoscarmjp">
-<br>
+<img src="https://github.com/yoscarmjp.png" width="105" alt="yoscarmjp"/><br>
 <strong>yoscarmjp</strong>
 </a>
-
 <br><br>
-
-👑 Owner
-
-<sub>Developer & Designer</sub>
-
+<img src="https://img.shields.io/badge/OWNER-8957E5?style=flat-square" alt="Owner"/>
+<br>
+<sub>Developer · Designer</sub>
 </td>
 
-<td align="center" width="190">
-
+<td align="center" width="180">
 <a href="https://github.com/Plataer_">
-<img src="https://github.com/Plataer_.png" width="115" alt="Plataer_">
-<br>
+<img src="https://github.com/Plataer_.png" width="105" alt="Plataer_"/><br>
 <strong>Plataer_</strong>
 </a>
-
 <br><br>
-
-💻 Member
-
+<img src="https://img.shields.io/badge/MEMBER-238636?style=flat-square" alt="Member"/>
+<br>
 <sub>Developer</sub>
-
 </td>
 
 </tr>
 
 <tr>
 
-<td align="center" width="190">
-
+<td align="center" width="180">
 <a href="https://github.com/AnexTurd1920">
-<img src="https://github.com/AnexTurd1920.png" width="115" alt="AnexTurd1920">
-<br>
+<img src="https://github.com/AnexTurd1920.png" width="105" alt="AnexTurd1920"/><br>
 <strong>AnexTurd1920</strong>
 </a>
-
 <br><br>
-
-💻 Member
-
+<img src="https://img.shields.io/badge/MEMBER-238636?style=flat-square" alt="Member"/>
+<br>
+<sub>GYK Studio Team</sub>
 </td>
 
-<td align="center" width="190">
-
+<td align="center" width="180">
 <a href="https://github.com/joelnatera113-cmd">
-<img src="https://github.com/joelnatera113-cmd.png" width="115" alt="joelnatera113-cmd">
-<br>
+<img src="https://github.com/joelnatera113-cmd.png" width="105" alt="joelnatera113-cmd"/><br>
 <strong>joelnatera113-cmd</strong>
 </a>
-
 <br><br>
-
-💻 Member
-
+<img src="https://img.shields.io/badge/MEMBER-238636?style=flat-square" alt="Member"/>
+<br>
+<sub>GYK Studio Team</sub>
 </td>
 
-<td align="center" width="190">
-
-<img src="https://avatars.githubusercontent.com/u/191543244?s=200&v=4" width="115" alt="GYK Studio">
-
-<br>
-
+<td align="center" width="180">
+<img src="https://avatars.githubusercontent.com/u/191543244?s=200&v=4" width="105" alt="GYK Studio"/><br>
 <strong>GYK Studio</strong>
-
 <br><br>
-
-🚀 Building Together
-
+<img src="https://img.shields.io/badge/BUILDING-TOGETHER-1F6FEB?style=flat-square" alt="Building together"/>
+<br>
+<sub>Since 2024</sub>
 </td>
 
 </tr>
-
 </table>
 
 </div>
 
-🌟 Colaboradores
+⚡ How we work
 
-GYK Studio no solamente está formado por miembros oficiales de la organización.
+<table>
+<tr>
 
-También valoramos a todas las personas que ayudan mediante:
+<td align="center" width="25%">
 
-💻 Código
+01
 
-🐛 Reportes de errores
+💡 IDEA
 
-💡 Ideas
+Pensamos qué vale la pena construir.
 
-🧪 Testing
+</td>
 
-📖 Documentación
+<td align="center" width="25%">
 
-🎨 Diseño
+02
 
-🔀 Pull Requests
+🧪 BUILD
 
-💬 Feedback
+Creamos, probamos y rompemos cosas.
 
-Cada contribución ayuda a mejorar nuestros proyectos.
+</td>
 
-Colaboradores de Nuvio Web
+<td align="center" width="25%">
 
-<a href="https://github.com/GYK-Studio/NuvioWeb/graphs/contributors">
-<img src="https://contrib.rocks/image?repo=GYK-Studio/NuvioWeb" alt="NuvioWeb Contributors">
-</a>
+03
 
-🤝 Cómo contribuir
+🔍 REVIEW
 
-Las contribuciones son bienvenidas.
+Revisamos código, comportamiento y diseño.
 
-Si quieres colaborar con alguno de nuestros proyectos, puedes hacerlo siguiendo estos pasos.
+</td>
 
-1️⃣ Haz un Fork
+<td align="center" width="25%">
 
-Desde GitHub, pulsa:
+04
 
-Fork
+🚀 SHIP
 
-en el repositorio donde quieras contribuir.
+Publicamos y seguimos mejorando.
 
-2️⃣ Clona tu fork
+</td>
 
-git clone https://github.com/TU-USUARIO/REPOSITORIO.git
+</tr>
+</table>
 
-Entra al proyecto:
+🤝 Contributing
 
-cd REPOSITORIO
+¿Encontraste algo que mejorar? Issues y Pull Requests son bienvenidos cuando el repositorio los acepte.
 
-3️⃣ Crea una nueva rama
+<table>
+<tr>
 
-git checkout -b feature/nueva-funcionalidad
+<td align="center" width="25%">
+<strong>① Fork</strong><br>
+<sub>Crea tu copia</sub>
+</td>
 
-Puedes utilizar nombres como:
+<td align="center" width="25%">
+<strong>② Branch</strong><br>
+<sub>Trabaja aislado</sub>
+</td>
 
-feature/nueva-funcionalidad
-fix/corregir-error
-docs/documentacion
-refactor/mejorar-codigo
-style/mejorar-interfaz
-test/agregar-pruebas
-chore/mantenimiento
+<td align="center" width="25%">
+<strong>③ Commit</strong><br>
+<sub>Describe el cambio</sub>
+</td>
 
-4️⃣ Realiza tus cambios
+<td align="center" width="25%">
+<strong>④ Pull Request</strong><br>
+<sub>Propón tu mejora</sub>
+</td>
 
-Desarrolla la funcionalidad o corrección.
+</tr>
+</table>
 
-Antes de enviar los cambios:
-
-prueba el proyecto;
-
-verifica que funcione correctamente;
-
-revisa tu código;
-
-evita incluir archivos innecesarios.
-
-5️⃣ Agrega los cambios
-
+git checkout -b feature/my-feature
 git add .
+git commit -m "feat: add my feature"
+git push origin feature/my-feature
 
-6️⃣ Crea un commit
+<details>
+<summary><strong>📌 Convenciones de commits</strong></summary>
 
-Ejemplo:
+<br>
 
-git commit -m "feat: add remote navigation support"
-
-Intentamos utilizar commits claros.
-
-Tipos recomendados
-
-Tipo
+Prefix
 
 Uso
 
@@ -664,504 +416,129 @@ Nueva funcionalidad
 
 fix
 
-Corrección de errores
+Corrección
 
 docs
 
 Documentación
 
-style
-
-Formato o interfaz
-
 refactor
 
 Refactorización
-
-test
-
-Pruebas
 
 perf
 
 Rendimiento
 
+test
+
+Pruebas
+
 chore
 
 Mantenimiento
 
-build
-
-Sistema de compilación
-
 ci
 
-Integración continua
+Automatización / CI
 
-Ejemplos:
+</details>
 
-feat: add user authentication
-
-fix: resolve remote navigation issue
-
-docs: update installation guide
-
-refactor: simplify player initialization
-
-perf: improve application startup
-
-7️⃣ Sube tu rama
-
-git push origin feature/nueva-funcionalidad
-
-8️⃣ Abre un Pull Request
-
-Desde GitHub, abre un Pull Request hacia el repositorio original.
-
-Intenta explicar:
-
-📝 Qué cambiaste
-
-🎯 Por qué lo cambiaste
-
-🧪 Cómo probarlo
-
-📷 Capturas si modificaste la interfaz
-
-⚠️ Problemas conocidos si existen
-
-🌱 ¿Quieres formar parte?
-
-Nos interesa colaborar con personas a las que les guste crear y experimentar.
-
-Algunas áreas en las que puedes contribuir:
-
-<table>
-
-<tr>
-
-<td>
-
-💻 Desarrollo
-
-Frontend
-
-Backend
-
-APIs
-
-Aplicaciones
-
-JavaScript
-
-TypeScript
-
-Python
-
-Java
-
-</td>
-
-<td>
-
-🎨 Diseño
-
-UI
-
-UX
-
-Interfaces
-
-Prototipos
-
-Identidad visual
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-☁️ Infraestructura
-
-Linux
-
-Docker
-
-Networking
-
-Hosting
-
-CI/CD
-
-DevOps
-
-</td>
-
-<td>
-
-🧪 Calidad
-
-Testing
-
-QA
-
-Bug reports
-
-Debugging
-
-Optimización
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-📝 Documentación
-
-README
-
-Tutoriales
-
-Guías
-
-Wikis
-
-Ejemplos
-
-</td>
-
-<td>
-
-💡 Ideas
-
-También puedes contribuir simplemente proponiendo nuevas ideas o mejoras.
-
-</td>
-
-</tr>
-
-</table>
-
-📋 Organización de repositorios
-
-Intentamos mantener nuestros repositorios organizados utilizando una estructura similar a esta:
-
-GYK-Studio
-│
-├── 🚀 Proyectos
-│   ├── Aplicaciones
-│   ├── Servicios
-│   ├── Herramientas
-│   └── Experimentos
-│
-├── 🍴 Forks
-│   ├── Adaptaciones
-│   ├── Experimentos
-│   └── Contribuciones externas
-│
-└── ⚙️ Organización
-    └── .github
-
-🏷️ Clasificación
-
-🚀 Proyecto
-
-Un repositorio creado originalmente por GYK Studio.
-
-GYK Studio
-   │
-   └── crea
-        │
-        ▼
-    🚀 Proyecto
-
-🍴 Fork
-
-Un repositorio creado originalmente por otra persona u organización y posteriormente derivado por GYK Studio.
-
-Proyecto original
-      │
-      ▼
-     Fork
-      │
-      ▼
-  GYK Studio
-
-Los forks no son presentados como proyectos originales nuestros.
-
-📐 Estándares
-
-Siempre que sea posible intentamos mantener:
-
-Código legible
-
-Commits descriptivos
-
-Ramas organizadas
-
-README actualizado
-
-Documentación
-
-Buenas prácticas
-
-Pull Requests claros
-
-Revisión antes de integrar cambios
-
-🔀 Git Workflow
-
-Nuestro flujo generalmente sigue esta estructura:
-
-main
- │
- ├── feature/*
- │
- ├── fix/*
- │
- ├── refactor/*
- │
- ├── docs/*
- │
- └── chore/*
-
-Ejemplo:
-
-git checkout main
-
-git pull origin main
-
-git checkout -b feature/new-feature
-
-# desarrollar...
-
-git add .
-
-git commit -m "feat: add new feature"
-
-git push origin feature/new-feature
-
-Después:
-
-Pull Request
-     ↓
-Review
-     ↓
-Changes / Approval
-     ↓
-Merge
-     ↓
-main
-
-🔐 Seguridad
-
-La seguridad es importante para nosotros.
-
-Si encuentras una vulnerabilidad:
-
-⚠️ Evita publicar información sensible directamente en un Issue público.
-
-Si el repositorio dispone de una sección:
-
-Security
-
-utiliza el procedimiento indicado allí.
-
-🐛 Reportar problemas
-
-Antes de crear un Issue:
-
-Comprueba si el problema ya fue reportado.
-
-Intenta reproducirlo.
-
-Incluye información suficiente.
-
-Un buen reporte puede incluir:
-
-Descripción:
-¿Qué ocurrió?
-
-Comportamiento esperado:
-¿Qué debería haber ocurrido?
-
-Pasos para reproducir:
-1.
-2.
-3.
-
-Sistema:
-SO:
-Versión:
-Navegador:
-Aplicación:
-
-Logs:
-...
-
-Capturas:
-...
-
-💬 Comunicación
-
-Para preguntas relacionadas con un proyecto específico puedes utilizar:
-
-Issues
-
-Pull Requests
-
-Discussions, cuando estén disponibles
-
-Organización
-
-https://github.com/GYK-Studio
-
-Repositorios
-
-https://github.com/orgs/GYK-Studio/repositories
-
-📄 Licencias
-
-Cada repositorio puede utilizar una licencia diferente dependiendo del proyecto.
-
-Antes de:
-
-copiar;
-
-modificar;
-
-redistribuir;
-
-reutilizar;
-
-o integrar código;
-
-consulta el archivo:
-
-LICENSE
-
-del repositorio correspondiente.
-
-Un fork también mantiene las condiciones de licencia establecidas por el proyecto original.
-
-📊 Estado de nuestros proyectos
-
-Nuestros repositorios pueden encontrarse en diferentes estados:
-
-Estado
-
-Significado
-
-🟢 Activo
-
-En desarrollo
-
-🔵 Estable
-
-Funcional y mantenido
-
-🟡 Experimental
-
-En pruebas
-
-🟠 Mantenimiento
-
-Recibe principalmente correcciones
-
-⚪ Pausado
-
-Desarrollo detenido temporalmente
-
-🔴 Archivado
-
-Ya no se mantiene
-
-🍴 Fork
-
-Derivado de un proyecto externo
-
-🗺️ Nuestra dirección
-
-Queremos continuar explorando áreas como:
-
-🌐 Aplicaciones web
-
-📺 Aplicaciones para Smart TVs
-
-📱 Aplicaciones multiplataforma
-
-⚙️ Backend
-
-☁️ Self-hosting
-
-🐳 Contenedores
-
-🤖 Inteligencia artificial
-
-🧩 Plugins
-
-🎮 Gaming
-
-🛠️ Herramientas de desarrollo
-
-🔓 Open Source
-
-Nuestro objetivo no es limitarnos a una tecnología determinada.
-
-Preferimos utilizar:
-
-la herramienta adecuada para resolver el problema adecuado.
-
-❤️ Gracias
-
-Gracias a todas las personas que:
-
-utilizan nuestros proyectos;
-
-prueban nuestras aplicaciones;
-
-reportan errores;
-
-envían contribuciones;
-
-comparten ideas;
-
-dejan una ⭐;
-
-o simplemente siguen nuestro trabajo.
-
-Cada contribución ayuda a hacer crecer nuestros proyectos.
+🧭 Principles
 
 <div align="center">
 
-<img src="https://avatars.githubusercontent.com/u/191543244?s=200&v=4" width="90" alt="GYK Studio">
 
-GYK Studio
 
-🚀 Building ideas. Creating experiences.
 
-Ideas → Código → Experiencias
+
+🧠 Learn by building
+
+Aprendemos creando cosas reales.
+
+🧪 Experiment often
+
+Probar ideas nuevas es parte del proceso.
+
+🤝 Build together
+
+Compartimos conocimiento y revisamos nuestro trabajo.
+
+🔓 Open when possible
+
+Compartimos código cuando el proyecto lo permite.
+
+📈 Keep improving
+
+Ninguna versión tiene que ser la última.
+
+</div>
+
+<details>
+<summary><strong>🍴 Política sobre Forks</strong></summary>
 
 <br>
 
-GitHub
-•
-Repositorios
-•
-Contribuir
+Un repositorio derivado de otro proyecto se identifica como Fork.
+
+Los forks pueden existir para:
+
+adaptar software a nuestras necesidades;
+
+probar cambios;
+
+preparar contribuciones;
+
+corregir problemas;
+
+mantener una variante personalizada;
+
+estudiar o experimentar con una implementación.
+
+El crédito, historial y licencia del proyecto original deben mantenerse según corresponda.
+
+</details>
+
+<details>
+<summary><strong>🔐 Seguridad</strong></summary>
 
 <br>
 
-Made with ❤️ by the GYK Studio Team 🇩🇴
+Si encuentras una vulnerabilidad, evita publicar información sensible directamente en un Issue público.
+
+Cuando el repositorio tenga una sección Security, utiliza el procedimiento indicado allí.
+
+</details>
+
+<details>
+<summary><strong>📄 Licencias</strong></summary>
 
 <br>
 
-⭐ Si uno de nuestros proyectos te resulta útil, considera dejar una estrella.
+Cada proyecto puede utilizar una licencia diferente.
+
+Consulta siempre el archivo LICENSE del repositorio antes de copiar, modificar o redistribuir código.
+
+Los forks continúan sujetos a las condiciones de sus proyectos originales.
+
+</details>
+
+<div align="center">
+
+✦ Explore. Build. Improve.
+
+<a href="https://github.com/GYK-Studio">
+<img src="https://img.shields.io/badge/GYK%20STUDIO-181717?style=for-the-badge&logo=github&logoColor=white" alt="GYK Studio"/>
+</a>
+
+<br><br>
+
+Made with code, curiosity and teamwork. 🇩🇴
+
+<br>
+
+<sub>GYK Studio · GitHub Organization Profile</sub>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=120&section=footer&color=0:0D1117,45:1F6FEB,100:7C3AED" alt="Footer"/>
 
 </div>
