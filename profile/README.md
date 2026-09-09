@@ -17,7 +17,7 @@ Full-Stack · Web · Mobile · Desktop · Systems · Cloud · Gaming · Open Sou
 
 <br>
 
-<a href="./README.es.md">
+<a href="https://github.com/GYK-Studio/.github/blob/main/profile/README.es.md">
   <img src="https://img.shields.io/badge/Leer%20en-Espa%C3%B1ol-CE1126?style=for-the-badge" alt="Leer en Español"/>
 </a>
 <a href="https://github.com/GYK-Studio">
@@ -561,9 +561,12 @@ CI / automation
 
 </details>
 
-🧭 Principles
+📚 More
 
-<div align="center">
+<details>
+<summary><strong>🧭 Principles</strong></summary>
+
+<br>
 
 
 
@@ -589,7 +592,7 @@ We share code whenever the project allows it.
 
 No version has to be the final one.
 
-</div>
+</details>
 
 <details>
 <summary><strong>🍴 Fork Policy</strong></summary>
@@ -639,6 +642,7 @@ Always check the repository's LICENSE file before copying, modifying or redistri
 Forks remain subject to the conditions of their original projects.
 
 </details>
+---
 
 <div align="center">
 
