@@ -1,5 +1,6 @@
 <!-- =========================================================
      GYK STUDIO — ORGANIZATION PROFILE
+     Main language: English
      ========================================================= -->
 
 <div align="center">
@@ -12,10 +13,13 @@
 
 Building digital experiences beyond the ordinary.
 
-Software · Web · Gaming · Infrastructure · Automation · Open Source
+Full-Stack · Web · Mobile · Desktop · Systems · Cloud · Gaming · Open Source
 
 <br>
 
+<a href="./README.es.md">
+  <img src="https://img.shields.io/badge/Leer%20en-Espa%C3%B1ol-CE1126?style=for-the-badge" alt="Leer en Español"/>
+</a>
 <a href="https://github.com/GYK-Studio">
   <img src="https://img.shields.io/badge/GitHub-GYK--Studio-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
 </a>
@@ -23,13 +27,23 @@ Software · Web · Gaming · Infrastructure · Automation · Open Source
   <img src="https://img.shields.io/badge/Explore-Repositories-1F6FEB?style=for-the-badge&logo=github&logoColor=white" alt="Repositories"/>
 </a>
 <img src="https://img.shields.io/badge/Open%20Source-Projects-2EA043?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="Open Source"/>
-<img src="https://img.shields.io/badge/Dominican%20Republic-🇩🇴-CE1126?style=for-the-badge" alt="Dominican Republic"/>
 
 <br><br>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=19&duration=3200&pause=900&color=58A6FF&center=true&vCenter=true&width=720&lines=We+build+things+we+want+to+use.;Web%2C+tools%2C+gaming+and+self-hosted+software.;Experiment.+Build.+Improve.+Repeat." alt="Typing SVG"/>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=19&duration=3200&pause=900&color=58A6FF&center=true&vCenter=true&width=720&lines=We+build+things+we+want+to+use.;Web%2C+mobile%2C+desktop%2C+cloud+and+gaming.;Experiment.+Build.+Improve.+Repeat." alt="Typing SVG"/>
 
 </div>
+
+<table align="center">
+<tr>
+<td align="center"><b>🌐 WEB</b></td>
+<td align="center"><b>📱 MOBILE</b></td>
+<td align="center"><b>🖥️ DESKTOP</b></td>
+<td align="center"><b>⚙️ BACKEND</b></td>
+<td align="center"><b>☁️ CLOUD</b></td>
+<td align="center"><b>🎮 GAMING</b></td>
+</tr>
+</table>
 
 ✦ Who we are
 
@@ -39,25 +53,27 @@ Software · Web · Gaming · Infrastructure · Automation · Open Source
 
 🚀 GYK Studio
 
-Somos un equipo que convierte ideas en software real.
+We are a full-stack team focused on turning ideas into real software.
 
-Construimos proyectos propios, herramientas, experiencias web y soluciones experimentales mientras exploramos nuevas tecnologías y mejoramos continuamente nuestra forma de crear.
+We build web products, mobile applications, desktop software, operating-system tools, backend services, infrastructure and experimental projects.
 
-No estamos atados a un único lenguaje, framework o plataforma.
+We work with modern technologies without locking ourselves into a single language, framework or platform.
 
-Elegimos la tecnología según el problema, no el problema según la tecnología.
+We choose the technology for the problem — not the problem for the technology.
 
 </td>
 <td width="38%" valign="top">
 
-⚡ En pocas palabras
+⚡ In short
 
 🌐 Web & Apps
+📱 Mobile
+🖥️ Desktop
 ⚙️ Backend & APIs
+☁️ Cloud & DevOps
+🐳 Containers
 🎮 Gaming
 ⛏️ Minecraft
-☁️ Self-hosting
-🐳 Containers
 🤖 Automation
 🎨 UI / UX
 🧪 Experiments
@@ -73,21 +89,45 @@ Elegimos la tecnología según el problema, no el problema según la tecnología
 
 <td width="50%" valign="top">
 
-🌐 Web & Applications
+🌐 Full-Stack Web
 
-Interfaces modernas, aplicaciones web y experiencias diseñadas para múltiples dispositivos.
+Complete products from interface to database and deployment.
 
-Frontend · Responsive UI · Smart TV · PWA
+Frontend · Backend · APIs · Databases · Auth · Deployments
 
 </td>
 
 <td width="50%" valign="top">
 
-⚙️ Backend & Services
+📱 Mobile Applications
 
-APIs, autenticación, bases de datos, integraciones y servicios que conectan nuestros productos.
+Mobile and cross-platform experiences for Android and iOS.
 
-REST APIs · Databases · Auth · Services
+Flutter · Dart · Kotlin · Android · Cross-platform
+
+</td>
+
+</tr>
+
+<tr>
+
+<td width="50%" valign="top">
+
+🖥️ Desktop & Operating Systems
+
+Desktop software, utilities and tools that interact directly with operating systems.
+
+Windows · Linux · Electron · Tauri · CLI · System Tools
+
+</td>
+
+<td width="50%" valign="top">
+
+⚙️ Backend & Distributed Services
+
+APIs, authentication, microservices, real-time systems and internal services.
+
+REST · WebSockets · Microservices · Auth · Caching · Queues
 
 </td>
 
@@ -99,19 +139,19 @@ REST APIs · Databases · Auth · Services
 
 🎮 Gaming & Minecraft
 
-Herramientas, plugins, servidores y proyectos experimentales relacionados con videojuegos.
+Plugins, servers, integrations and experimental gaming tools.
 
-Minecraft · Spigot · Paper · Tools
+Minecraft · Spigot · Paper · Java · Server Tools
 
 </td>
 
 <td width="50%" valign="top">
 
-☁️ Infrastructure
+☁️ Infrastructure & DevOps
 
-Despliegue, automatización y servicios self-hosted para ejecutar nuestros proyectos.
+Containers, networking, proxies, automation and self-hosted services.
 
-Docker · Linux · CI/CD · Reverse Proxy
+Docker · Linux · CI/CD · Reverse Proxy · Cloud · Self-hosting
 
 </td>
 
@@ -121,21 +161,21 @@ Docker · Linux · CI/CD · Reverse Proxy
 
 <td width="50%" valign="top">
 
-🤖 Automation
+🤖 Automation & Developer Tools
 
-Bots, scripts y utilidades creadas para automatizar tareas y conectar sistemas.
+Bots, scripts, CLIs, internal tools and integrations that remove repetitive work.
 
-Bots · Scripts · Integrations · Tooling
+Python · Bash · Node.js · Automation · Tooling
 
 </td>
 
 <td width="50%" valign="top">
 
-🧪 Labs
+🧪 Labs & Emerging Tech
 
-Prototipos, pruebas de concepto y proyectos donde simplemente preguntamos:
+Prototypes, AI, new runtimes, frameworks and technologies we actively explore.
 
-“¿Y si intentamos esto?”
+AI · LLMs · Prototypes · Experiments · R&D
 
 </td>
 
@@ -155,7 +195,7 @@ Prototipos, pruebas de concepto y proyectos donde simplemente preguntamos:
 
 <br>
 
-Software creado y desarrollado originalmente por GYK Studio.
+Software originally created and developed by GYK Studio.
 
 <br>
 
@@ -171,7 +211,7 @@ Software creado y desarrollado originalmente por GYK Studio.
 
 <br>
 
-Repositorios derivados de proyectos externos para adaptar, experimentar, corregir o contribuir.
+Repositories derived from external projects for adaptation, experimentation, fixes or contributions.
 
 <br>
 
@@ -187,7 +227,7 @@ Repositorios derivados de proyectos externos para adaptar, experimentar, corregi
 </div>
 
 [!IMPORTANT]
-Si un repositorio de la organización aparece en GitHub como “forked from …”, lo consideramos un Fork, no un proyecto original de GYK Studio.
+If a repository appears on GitHub as “forked from …”, we classify it as a Fork, not as an original GYK Studio project.
 
 ★ Featured
 
@@ -197,7 +237,7 @@ Si un repositorio de la organización aparece en GitHub como “forked from …�
 
 🎬 Nuvio Web
 
-Una experiencia multimedia TV-first, pensada para navegadores y plataformas de Smart TV.
+A TV-first multimedia experience built for browsers and Smart TV platforms.
 
 <p>
 <img src="https://img.shields.io/badge/Web-App-1F6FEB?style=flat-square" alt="Web App"/>
@@ -206,7 +246,7 @@ Una experiencia multimedia TV-first, pensada para navegadores y plataformas de S
 <img src="https://img.shields.io/badge/Self--Hosted-DB6D28?style=flat-square" alt="Self Hosted"/>
 </p>
 
-Áreas principales: interfaces para TV, navegación con control remoto, reproducción multimedia, integraciones, backend e infraestructura.
+Main areas include TV interfaces, remote-control navigation, media playback, integrations, backend and infrastructure.
 
 <a href="https://github.com/GYK-Studio/NuvioWeb">
 <img src="https://img.shields.io/badge/Open%20Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="Open Nuvio Web"/>
@@ -216,27 +256,104 @@ Una experiencia multimedia TV-first, pensada para navegadores y plataformas de S
 </tr>
 </table>
 
-◇ Tech stack
+◇ Technology stack
 
 <div align="center">
 
-Languages & Web
+🌐 Frontend
 
-<img src="https://skillicons.dev/icons?i=html,css,js,ts,python,java&perline=12" alt="Languages"/>
+<img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,vue,vite,tailwind&perline=9" alt="Frontend technologies"/>
 
-<br><br>
-
-Frameworks, Runtime & Data
-
-<img src="https://skillicons.dev/icons?i=react,nodejs,postgres,supabase&perline=12" alt="Frameworks and databases"/>
+HTML5 · CSS3 · JavaScript · TypeScript · React · Next.js · Vue · Vite · Tailwind CSS
 
 <br><br>
 
-Infrastructure & Tools
+⚙️ Backend & APIs
 
-<img src="https://skillicons.dev/icons?i=docker,linux,nginx,cloudflare,git,github,vscode,idea,figma,bash&perline=12" alt="Tools"/>
+<img src="https://skillicons.dev/icons?i=nodejs,express,python,fastapi,java,spring,php,dotnet&perline=8" alt="Backend technologies"/>
+
+Node.js · Express · Python · FastAPI · Java · Spring · PHP · .NET
+
+<br><br>
+
+📱 Mobile Development
+
+<img src="https://skillicons.dev/icons?i=flutter,dart,kotlin,androidstudio&perline=8" alt="Mobile technologies"/>
+
+Flutter · Dart · Kotlin · Android · Cross-platform Apps
+
+<br><br>
+
+🖥️ Desktop, Native & Systems
+
+<img src="https://skillicons.dev/icons?i=electron,rust,c,cpp,cs,bash,powershell&perline=8" alt="Desktop and systems technologies"/>
+
+Electron · Rust · C · C++ · C# · Bash · PowerShell · CLI Tools
+
+<br><br>
+
+🗄️ Databases & Data
+
+<img src="https://skillicons.dev/icons?i=postgres,mysql,mongodb,redis,sqlite,supabase,prisma&perline=8" alt="Database technologies"/>
+
+PostgreSQL · MySQL · MongoDB · Redis · SQLite · Supabase · Prisma
+
+<br><br>
+
+☁️ Infrastructure, Cloud & DevOps
+
+<img src="https://skillicons.dev/icons?i=docker,kubernetes,linux,nginx,cloudflare,githubactions,terraform,aws,gcp,azure&perline=10" alt="Infrastructure technologies"/>
+
+Docker · Kubernetes · Linux · Nginx · Cloudflare · GitHub Actions · Terraform · AWS · Google Cloud · Azure
+
+<br><br>
+
+🐧 Operating Systems & Environments
+
+<img src="https://skillicons.dev/icons?i=linux,ubuntu,debian,windows,apple&perline=8" alt="Operating systems"/>
+
+Linux · Ubuntu · Debian · Windows · macOS · Servers
+
+<br><br>
+
+🔧 Development & Design
+
+<img src="https://skillicons.dev/icons?i=git,github,vscode,idea,visualstudio,figma,postman&perline=8" alt="Development tools"/>
+
+Git · GitHub · VS Code · IntelliJ IDEA · Visual Studio · Figma · Postman
 
 </div>
+
+<br>
+
+<table>
+<tr>
+<td width="33%" align="center">
+
+🧩 Full-Stack
+
+Frontend + backend + data + deployment.
+
+</td>
+<td width="33%" align="center">
+
+📱 Multi-platform
+
+Web, mobile, desktop and Smart TV.
+
+</td>
+<td width="33%" align="center">
+
+🛠️ Systems
+
+Tools, servers and automation.
+
+</td>
+</tr>
+</table>
+
+[!NOTE]
+Our stack is not a closed list. We choose tools based on each project and keep adopting modern technologies when they provide real value.
 
 👥 The team
 
@@ -253,7 +370,7 @@ Infrastructure & Tools
 <br><br>
 <img src="https://img.shields.io/badge/OWNER-8957E5?style=flat-square" alt="Owner"/>
 <br>
-<sub>Developer</sub>
+<sub>Full-Stack Developer</sub>
 </td>
 
 <td align="center" width="180">
@@ -264,7 +381,7 @@ Infrastructure & Tools
 <br><br>
 <img src="https://img.shields.io/badge/OWNER-8957E5?style=flat-square" alt="Owner"/>
 <br>
-<sub>Developer · Designer</sub>
+<sub>Full-Stack Developer · Designer</sub>
 </td>
 
 <td align="center" width="180">
@@ -275,7 +392,7 @@ Infrastructure & Tools
 <br><br>
 <img src="https://img.shields.io/badge/MEMBER-238636?style=flat-square" alt="Member"/>
 <br>
-<sub>Developer</sub>
+<sub>Full-Stack Developer · Mobile Developer</sub>
 </td>
 
 </tr>
@@ -290,7 +407,7 @@ Infrastructure & Tools
 <br><br>
 <img src="https://img.shields.io/badge/MEMBER-238636?style=flat-square" alt="Member"/>
 <br>
-<sub>GYK Studio Team</sub>
+<sub>Full-Stack Developer</sub>
 </td>
 
 <td align="center" width="180">
@@ -301,7 +418,7 @@ Infrastructure & Tools
 <br><br>
 <img src="https://img.shields.io/badge/MEMBER-238636?style=flat-square" alt="Member"/>
 <br>
-<sub>GYK Studio Team</sub>
+<sub>Full-Stack Developer</sub>
 </td>
 
 <td align="center" width="180">
@@ -310,7 +427,7 @@ Infrastructure & Tools
 <br><br>
 <img src="https://img.shields.io/badge/BUILDING-TOGETHER-1F6FEB?style=flat-square" alt="Building together"/>
 <br>
-<sub>Since 2024</sub>
+<sub>Team</sub>
 </td>
 
 </tr>
@@ -329,7 +446,7 @@ Infrastructure & Tools
 
 💡 IDEA
 
-Pensamos qué vale la pena construir.
+We decide what is worth building.
 
 </td>
 
@@ -339,7 +456,7 @@ Pensamos qué vale la pena construir.
 
 🧪 BUILD
 
-Creamos, probamos y rompemos cosas.
+We build, test and break things.
 
 </td>
 
@@ -349,7 +466,7 @@ Creamos, probamos y rompemos cosas.
 
 🔍 REVIEW
 
-Revisamos código, comportamiento y diseño.
+We review code, behavior and design.
 
 </td>
 
@@ -359,7 +476,7 @@ Revisamos código, comportamiento y diseño.
 
 🚀 SHIP
 
-Publicamos y seguimos mejorando.
+We ship and keep improving.
 
 </td>
 
@@ -368,29 +485,29 @@ Publicamos y seguimos mejorando.
 
 🤝 Contributing
 
-¿Encontraste algo que mejorar? Issues y Pull Requests son bienvenidos cuando el repositorio los acepte.
+Found something that could be improved? Issues and Pull Requests are welcome when the repository accepts them.
 
 <table>
 <tr>
 
 <td align="center" width="25%">
 <strong>① Fork</strong><br>
-<sub>Crea tu copia</sub>
+<sub>Create your copy</sub>
 </td>
 
 <td align="center" width="25%">
 <strong>② Branch</strong><br>
-<sub>Trabaja aislado</sub>
+<sub>Work in isolation</sub>
 </td>
 
 <td align="center" width="25%">
 <strong>③ Commit</strong><br>
-<sub>Describe el cambio</sub>
+<sub>Describe the change</sub>
 </td>
 
 <td align="center" width="25%">
 <strong>④ Pull Request</strong><br>
-<sub>Propón tu mejora</sub>
+<sub>Propose your improvement</sub>
 </td>
 
 </tr>
@@ -402,45 +519,45 @@ git commit -m "feat: add my feature"
 git push origin feature/my-feature
 
 <details>
-<summary><strong>📌 Convenciones de commits</strong></summary>
+<summary><strong>📌 Commit conventions</strong></summary>
 
 <br>
 
 Prefix
 
-Uso
+Usage
 
 feat
 
-Nueva funcionalidad
+New feature
 
 fix
 
-Corrección
+Bug fix
 
 docs
 
-Documentación
+Documentation
 
 refactor
 
-Refactorización
+Refactoring
 
 perf
 
-Rendimiento
+Performance
 
 test
 
-Pruebas
+Tests
 
 chore
 
-Mantenimiento
+Maintenance
 
 ci
 
-Automatización / CI
+CI / automation
 
 </details>
 
@@ -454,72 +571,72 @@ Automatización / CI
 
 🧠 Learn by building
 
-Aprendemos creando cosas reales.
+We learn by creating real things.
 
 🧪 Experiment often
 
-Probar ideas nuevas es parte del proceso.
+Experimentation is part of the process.
 
 🤝 Build together
 
-Compartimos conocimiento y revisamos nuestro trabajo.
+We share knowledge and review our work.
 
 🔓 Open when possible
 
-Compartimos código cuando el proyecto lo permite.
+We share code whenever the project allows it.
 
 📈 Keep improving
 
-Ninguna versión tiene que ser la última.
+No version has to be the final one.
 
 </div>
 
 <details>
-<summary><strong>🍴 Política sobre Forks</strong></summary>
+<summary><strong>🍴 Fork Policy</strong></summary>
 
 <br>
 
-Un repositorio derivado de otro proyecto se identifica como Fork.
+A repository derived from another project is identified as a Fork.
 
-Los forks pueden existir para:
+Forks may exist to:
 
-adaptar software a nuestras necesidades;
+adapt software to our needs;
 
-probar cambios;
+test changes;
 
-preparar contribuciones;
+prepare contributions;
 
-corregir problemas;
+fix issues;
 
-mantener una variante personalizada;
+maintain a customized variant;
 
-estudiar o experimentar con una implementación.
+study or experiment with an implementation.
 
-El crédito, historial y licencia del proyecto original deben mantenerse según corresponda.
+Credit, history and licensing from the original project must be preserved when applicable.
 
 </details>
 
 <details>
-<summary><strong>🔐 Seguridad</strong></summary>
+<summary><strong>🔐 Security</strong></summary>
 
 <br>
 
-Si encuentras una vulnerabilidad, evita publicar información sensible directamente en un Issue público.
+If you find a vulnerability, avoid publishing sensitive information directly in a public Issue.
 
-Cuando el repositorio tenga una sección Security, utiliza el procedimiento indicado allí.
+When a repository provides a Security section, follow the process described there.
 
 </details>
 
 <details>
-<summary><strong>📄 Licencias</strong></summary>
+<summary><strong>📄 Licenses</strong></summary>
 
 <br>
 
-Cada proyecto puede utilizar una licencia diferente.
+Each project may use a different license.
 
-Consulta siempre el archivo LICENSE del repositorio antes de copiar, modificar o redistribuir código.
+Always check the repository's LICENSE file before copying, modifying or redistributing code.
 
-Los forks continúan sujetos a las condiciones de sus proyectos originales.
+Forks remain subject to the conditions of their original projects.
 
 </details>
 
