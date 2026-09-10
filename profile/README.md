@@ -385,14 +385,14 @@ Our stack is not a closed list. We choose tools based on each project and keep a
 </td>
 
 <td align="center" width="180">
-<a href="https://github.com/Plataer_">
-<img src="https://github.com/Plataer_.png" width="105" alt="Plataer_"/><br>
+<a href="https://github.com/Plataer">
+<img src="https://github.com/Plataer.png" width="105" alt="Plataer_"/><br>
 <strong>Plataer_</strong>
 </a>
 <br><br>
 <img src="https://img.shields.io/badge/MEMBER-238636?style=flat-square" alt="Member"/>
 <br>
-<sub>Full-Stack Developer · Mobile Developer</sub>
+<sub>Full-Stack Developer · App Developer</sub>
 </td>
 
 </tr>
