@@ -422,6 +422,17 @@ Our stack is not a closed list. We choose tools based on each project and keep a
 </td>
 
 <td align="center" width="180">
+<a href="https://github.com/josedarlingabreu">
+<img src="https://github.com/josedarlingabreu.png" width="105" alt="josedarlingabreu"/><br>
+<strong>josedarlingabreu</strong>
+</a>
+<br><br>
+<img src="https://img.shields.io/badge/MEMBER-238636?style=flat-square" alt="Member"/>
+<br>
+<sub>Full-Stack Developer</sub>
+</td>
+
+<td align="center" width="180">
 <img src="https://avatars.githubusercontent.com/u/191543244?s=200&v=4" width="105" alt="GYK Studio"/><br>
 <strong>GYK Studio</strong>
 <br><br>
