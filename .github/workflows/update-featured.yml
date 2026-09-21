@@ -54,26 +54,30 @@ jobs:
 
             console.log('Proyectos seleccionados: ' + topProjects.map(p => p.name).join(', '));
 
-            function renderCard(p, lang, isFullWidth) {
-              if (!p) return '';
+            function getIcon(name) {
+              const lower = name.toLowerCase();
+              if (lower.includes('nuvio') || lower.includes('tv')) return '🎬';
+              if (lower.includes('host') || lower.includes('api') || lower.includes('server')) return '⚙️';
+              return '🚀';
+            }
+
+            function renderCard(p, lang) {
               const isEs = lang === 'es';
               const openRepoText = isEs ? 'Ver Repositorio' : 'Open Repository';
               const noDescText = isEs ? 'Proyecto activo de GYK Studio.' : 'Active GYK Studio project.';
               const desc = p.description || noDescText;
-              const topics = (p.topics || []).slice(0, 3)
+              const icon = getIcon(p.name);
+              const topics = (p.topics || []).slice(0, 4)
                 .map(t => '<img src="https://img.shields.io/badge/' + encodeURIComponent(t) + '-1F6FEB?style=flat-square" alt="' + t + '"/>')
                 .join(' ');
 
-              const widthAttr = isFullWidth ? 'colspan="2"' : 'width="50%"';
-
               return [
-                '<td align="center" ' + widthAttr + ' valign="top">',
+                '<tr>',
+                '<td width="100%" valign="top">',
                 '',
-                '<h3>🚀 <a href="' + p.html_url + '">' + p.name + '</a></h3>',
+                icon + ' <b><a href="' + p.html_url + '">' + p.name + '</a></b>',
                 '',
                 desc,
-                '',
-                '<br><br>',
                 '',
                 '<p>',
                 '<img src="https://img.shields.io/github/stars/' + org + '/' + p.name + '?style=flat-square&logo=github&color=1F6FEB" alt="Stars"/>',
@@ -81,29 +85,18 @@ jobs:
                 '<img src="https://img.shields.io/github/license/' + org + '/' + p.name + '?style=flat-square&color=2EA043" alt="License"/>',
                 '</p>',
                 topics ? '<p>' + topics + '</p>' : '',
-                '<br>',
                 '<a href="' + p.html_url + '">',
                 '<img src="https://img.shields.io/badge/' + encodeURIComponent(openRepoText) + '-181717?style=for-the-badge&logo=github&logoColor=white" alt="' + openRepoText + '"/>',
                 '</a>',
-                '<br><br>',
                 '',
-                '</td>'
+                '</td>',
+                '</tr>'
               ].filter(Boolean).join('\n');
             }
 
             function renderHTML(projects, lang) {
-              let rows = '';
-              for (let i = 0; i < projects.length; i += 2) {
-                const p1 = projects[i];
-                const p2 = projects[i + 1];
-
-                if (!p2) {
-                  rows += '<tr>\n' + renderCard(p1, lang, true) + '\n</tr>\n';
-                } else {
-                  rows += '<tr>\n' + renderCard(p1, lang, false) + '\n' + renderCard(p2, lang, false) + '\n</tr>\n';
-                }
-              }
-              return '<!-- FEATURED:START -->\n<div align="center">\n\n<table align="center" width="100%">\n' + rows + '</table>\n\n</div>\n<!-- FEATURED:END -->';
+              const rows = projects.map(p => renderCard(p, lang)).join('\n');
+              return '<!-- FEATURED:START -->\n<table>\n' + rows + '\n</table>\n<!-- FEATURED:END -->';
             }
 
             const targets = [
