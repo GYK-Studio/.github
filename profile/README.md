@@ -322,34 +322,12 @@ Repositories derived from external projects for adaptation, experimentation, fix
 If a repository appears on GitHub as “forked from …”, we classify it as a Fork, not as an original GYK Studio project.
 
 
-★ Featured
+★ Featured Projects
 
 <!-- FEATURED:START -->
-<table>
-<tr>
-<td width="100%" valign="top">
-
-<h3>🎬 <a href="https://github.com/GYK-Studio/NuvioWeb">Nuvio Web</a></h3>
-
-A TV-first multimedia experience built for browsers and Smart TV platforms.
-
-<p>
-<img src="https://img.shields.io/github/stars/GYK-Studio/NuvioWeb?style=flat-square&logo=github&color=1F6FEB" alt="Stars"/>
-<img src="https://img.shields.io/github/last-commit/GYK-Studio/NuvioWeb?style=flat-square&color=8957E5" alt="Last Commit"/>
-<img src="https://img.shields.io/github/license/GYK-Studio/NuvioWeb?style=flat-square&color=2EA043" alt="License"/>
-</p>
-
-Main areas include TV interfaces, remote-control navigation, media playback, integrations, backend and infrastructure.
-
-<br>
-
-<a href="https://github.com/GYK-Studio/NuvioWeb">
-<img src="https://img.shields.io/badge/Open%20Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="Open Nuvio Web"/>
-</a>
-
-</td>
-</tr>
-</table>
+<div align="center">
+  <p><em>⏳ Updating most active projects...</em></p>
+</div>
 <!-- FEATURED:END -->
 
 
