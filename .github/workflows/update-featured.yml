@@ -1,9 +1,14 @@
 name: Auto-Update Featured Projects
 
 on:
+  # Se inicia automáticamente en cuanto hagas push de este archivo o cualquier cambio a main
+  push:
+    branches: [main]
+  # Se ejecuta automáticamente cada 6 horas por su cuenta
   schedule:
-    - cron: '0 0 * * *' # Se ejecuta diariamente a medianoche UTC
-  workflow_dispatch:     # Permite ejecutarlo manualmente desde GitHub Actions
+    - cron: '0 */6 * * *'
+  # Te permite ejecutarlo manualmente con un clic cuando quieras desde la pestaña Actions
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -45,7 +50,7 @@ jobs:
             // Filtrar forks y el repositorio de configuración .github
             const originalRepos = repos.filter(r => !r.fork && r.name !== '.github');
 
-            // Tomar los 4 proyectos más activos
+            // Tomar los 4 proyectos con actividad más reciente
             const topProjects = originalRepos.slice(0, 4);
 
             if (topProjects.length === 0) {
@@ -55,7 +60,7 @@ jobs:
 
             console.log(`Proyectos seleccionados: ${topProjects.map(p => p.name).join(', ')}`);
 
-            // Función para renderizar el bloque HTML en formato rejilla 2 columnas
+            // 2. Función para renderizar el bloque HTML en rejilla de 2 columnas
             function renderHTML(projects, lang = 'es') {
               const isEs = lang === 'es';
               const openRepoText = isEs ? 'Ver Repositorio' : 'Open Repository';
@@ -105,7 +110,7 @@ jobs:
               return `<!-- FEATURED:START -->\n<table>${rows}\n</table>\n<!-- FEATURED:END -->`;
             }
 
-            // 2. Actualizar archivos en inglés y español si existen
+            // 3. Buscar y actualizar archivos en inglés y español
             const targets = [
               { paths: ['profile/README.md', 'README.md'], lang: 'en' },
               { paths: ['profile/README.es.md', 'README.es.md'], lang: 'es' }
@@ -121,7 +126,7 @@ jobs:
                   if (regex.test(content)) {
                     content = content.replace(regex, html);
                     fs.writeFileSync(file, content, 'utf-8');
-                    console.log(`Actualizado (${target.lang}): ${file}`);
+                    console.log(`Actualizado con éxito (${target.lang}): ${file}`);
                   }
                 }
               }
@@ -140,8 +145,8 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           if ! git diff --quiet && ! git diff --cached --quiet; then
-            git commit -m "chore(readme): auto-update most active projects"
+            git commit -m "chore(readme): auto-update featured projects [skip ci]"
             git push
           else
-            echo "Sin cambios en los proyectos destacados."
+            echo "Sin cambios en los proyectos."
           fi
