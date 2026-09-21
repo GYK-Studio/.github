@@ -325,52 +325,49 @@ Si un repositorio aparece en GitHub como “forked from …”, lo clasificamos 
 ★ Destacados
 
 <!-- FEATURED:START -->
-<table>
+<table width="100%">
+<thead>
 <tr>
-<td width="100%" valign="top">
-🚀 <b><a href="https://github.com/GYK-Studio/Web-GYK-Studio">Web-GYK-Studio</a></b>
-Proyecto activo de GYK Studio.
-<p>
-<img src="https://img.shields.io/github/stars/GYK-Studio/Web-GYK-Studio?style=flat-square&logo=github&color=1F6FEB" alt="Stars"/>
-<img src="https://img.shields.io/github/last-commit/GYK-Studio/Web-GYK-Studio?style=flat-square&color=8957E5" alt="Last Commit"/>
-<img src="https://img.shields.io/github/license/GYK-Studio/Web-GYK-Studio?style=flat-square&color=2EA043" alt="License"/>
-</p>
+<th align="left">Proyecto</th>
+<th align="left">Descripción</th>
+<th align="center">Tecnologías</th>
+<th align="center">Repositorio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td valign="middle"><b>🌐 <a href="https://github.com/GYK-Studio/Web-GYK-Studio">Web GYK Studio</a></b></td>
+<td valign="middle">Plataforma web oficial y portal digital de GYK Studio.</td>
+<td align="center" valign="middle"><img src="https://img.shields.io/badge/Astro-1F6FEB?style=flat-square" alt="Astro"/> <img src="https://img.shields.io/badge/TypeScript-8957E5?style=flat-square" alt="TypeScript"/> <img src="https://img.shields.io/badge/Tailwind-2EA043?style=flat-square" alt="Tailwind"/></td>
+<td align="center" valign="middle">
 <a href="https://github.com/GYK-Studio/Web-GYK-Studio">
-<img src="https://img.shields.io/badge/Ver%20Repositorio-181717?style=for-the-badge&logo=github&logoColor=white" alt="Ver Repositorio"/>
+<img src="https://img.shields.io/badge/Explorar%20%E2%86%97-181717?style=flat-square&logo=github&logoColor=white" alt="Explorar ↗"/>
 </a>
 </td>
 </tr>
 <tr>
-<td width="100%" valign="top">
-🎬 <b><a href="https://github.com/GYK-Studio/NuvioWeb">NuvioWeb</a></b>
-web
-<p>
-<img src="https://img.shields.io/github/stars/GYK-Studio/NuvioWeb?style=flat-square&logo=github&color=1F6FEB" alt="Stars"/>
-<img src="https://img.shields.io/github/last-commit/GYK-Studio/NuvioWeb?style=flat-square&color=8957E5" alt="Last Commit"/>
-<img src="https://img.shields.io/github/license/GYK-Studio/NuvioWeb?style=flat-square&color=2EA043" alt="License"/>
-</p>
+<td valign="middle"><b>🎬 <a href="https://github.com/GYK-Studio/NuvioWeb">Nuvio Web</a></b></td>
+<td valign="middle">Experiencia multimedia TV-first para navegadores y Smart TVs.</td>
+<td align="center" valign="middle"><img src="https://img.shields.io/badge/TV-First-8957E5?style=flat-square" alt="TV-First"/> <img src="https://img.shields.io/badge/JavaScript-1F6FEB?style=flat-square" alt="JavaScript"/> <img src="https://img.shields.io/badge/Streaming-2EA043?style=flat-square" alt="Streaming"/></td>
+<td align="center" valign="middle">
 <a href="https://github.com/GYK-Studio/NuvioWeb">
-<img src="https://img.shields.io/badge/Ver%20Repositorio-181717?style=for-the-badge&logo=github&logoColor=white" alt="Ver Repositorio"/>
+<img src="https://img.shields.io/badge/Explorar%20%E2%86%97-181717?style=flat-square&logo=github&logoColor=white" alt="Explorar ↗"/>
 </a>
 </td>
 </tr>
 <tr>
-<td width="100%" valign="top">
-⚙️ <b><a href="https://github.com/GYK-Studio/self-host-M">self-host-M</a></b>
-Repository for the Nuvio self-hosted backend
-<p>
-<img src="https://img.shields.io/github/stars/GYK-Studio/self-host-M?style=flat-square&logo=github&color=1F6FEB" alt="Stars"/>
-<img src="https://img.shields.io/github/last-commit/GYK-Studio/self-host-M?style=flat-square&color=8957E5" alt="Last Commit"/>
-<img src="https://img.shields.io/github/license/GYK-Studio/self-host-M?style=flat-square&color=2EA043" alt="License"/>
-</p>
+<td valign="middle"><b>⚙️ <a href="https://github.com/GYK-Studio/self-host-M">Nuvio Self-Hosted</a></b></td>
+<td valign="middle">Infraestructura backend self-hosted y APIs para Nuvio.</td>
+<td align="center" valign="middle"><img src="https://img.shields.io/badge/Backend-DB6D28?style=flat-square" alt="Backend"/> <img src="https://img.shields.io/badge/PostgreSQL-1F6FEB?style=flat-square" alt="PostgreSQL"/> <img src="https://img.shields.io/badge/Docker-2EA043?style=flat-square" alt="Docker"/></td>
+<td align="center" valign="middle">
 <a href="https://github.com/GYK-Studio/self-host-M">
-<img src="https://img.shields.io/badge/Ver%20Repositorio-181717?style=for-the-badge&logo=github&logoColor=white" alt="Ver Repositorio"/>
+<img src="https://img.shields.io/badge/Explorar%20%E2%86%97-181717?style=flat-square&logo=github&logoColor=white" alt="Explorar ↗"/>
 </a>
 </td>
 </tr>
+</tbody>
 </table>
 <!-- FEATURED:END -->
-
 
 ◇ Tecnologías
 
