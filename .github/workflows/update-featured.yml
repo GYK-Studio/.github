@@ -1,13 +1,10 @@
 name: Auto-Update Featured Projects
 
 on:
-  # Se inicia automáticamente en cuanto hagas push de este archivo o cualquier cambio a main
   push:
     branches: [main]
-  # Se ejecuta automáticamente cada 6 horas por su cuenta
   schedule:
     - cron: '0 */6 * * *'
-  # Te permite ejecutarlo manualmente con un clic cuando quieras desde la pestaña Actions
   workflow_dispatch:
 
 permissions:
@@ -47,20 +44,20 @@ jobs:
             if (!res.ok) throw new Error(`Error API: ${res.statusText}`);
             const repos = await res.json();
 
-            // Filtrar forks y el repositorio de configuración .github
-            const originalRepos = repos.filter(r => !r.fork && r.name !== '.github');
+            // Filtrar solo el repo especial .github (incluye Web-GYK-Studio, NuvioWeb, self-host-M, etc.)
+            const activeRepos = repos.filter(r => r.name !== '.github');
 
-            // Tomar los 4 proyectos con actividad más reciente
-            const topProjects = originalRepos.slice(0, 4);
+            // Tomar los repositorios con actividad más reciente (máximo 4)
+            const topProjects = activeRepos.slice(0, 4);
 
             if (topProjects.length === 0) {
-              console.log('No se encontraron repositorios originales.');
+              console.log('No se encontraron repositorios activos.');
               return;
             }
 
             console.log(`Proyectos seleccionados: ${topProjects.map(p => p.name).join(', ')}`);
 
-            // 2. Función para renderizar el bloque HTML en rejilla de 2 columnas
+            // 2. Renderizar cuadrícula simétrica
             function renderHTML(projects, lang = 'es') {
               const isEs = lang === 'es';
               const openRepoText = isEs ? 'Ver Repositorio' : 'Open Repository';
@@ -79,38 +76,38 @@ jobs:
                     .join(' ');
 
                   return `
-          <td width="50%" valign="top">
+<td width="50%" valign="top">
 
-          <h3>🚀 <a href="${p.html_url}">${p.name}</a></h3>
+<h3>🚀 <a href="${p.html_url}">${p.name}</a></h3>
 
-          ${desc}
+${desc}
 
-          <p>
-          <img src="https://img.shields.io/github/stars/${org}/${p.name}?style=flat-square&logo=github&color=1F6FEB" alt="Stars"/>
-          <img src="https://img.shields.io/github/last-commit/${org}/${p.name}?style=flat-square&color=8957E5" alt="Last Commit"/>
-          <img src="https://img.shields.io/github/license/${org}/${p.name}?style=flat-square&color=2EA043" alt="License"/>
-          </p>
+<p>
+<img src="https://img.shields.io/github/stars/${org}/${p.name}?style=flat-square&logo=github&color=1F6FEB" alt="Stars"/>
+<img src="https://img.shields.io/github/last-commit/${org}/${p.name}?style=flat-square&color=8957E5" alt="Last Commit"/>
+<img src="https://img.shields.io/github/license/${org}/${p.name}?style=flat-square&color=2EA043" alt="License"/>
+</p>
 
-          ${topics ? `<p>${topics}</p>` : ''}
+${topics ? `<p>${topics}</p>` : ''}
 
-          <a href="${p.html_url}">
-          <img src="https://img.shields.io/badge/${encodeURIComponent(openRepoText)}-181717?style=for-the-badge&logo=github&logoColor=white" alt="${openRepoText}"/>
-          </a>
+<a href="${p.html_url}">
+<img src="https://img.shields.io/badge/${encodeURIComponent(openRepoText)}-181717?style=for-the-badge&logo=github&logoColor=white" alt="${openRepoText}"/>
+</a>
 
-          </td>`;
+</td>`;
                 };
 
                 rows += `
-          <tr>
-          ${renderCard(p1)}
-          ${renderCard(p2)}
-          </tr>`;
+<tr>
+${renderCard(p1)}
+${renderCard(p2)}
+</tr>`;
               }
 
               return `<!-- FEATURED:START -->\n<table>${rows}\n</table>\n<!-- FEATURED:END -->`;
             }
 
-            // 3. Buscar y actualizar archivos en inglés y español
+            // 3. Actualizar tanto inglés como español
             const targets = [
               { paths: ['profile/README.md', 'README.md'], lang: 'en' },
               { paths: ['profile/README.es.md', 'README.es.md'], lang: 'es' }
@@ -126,7 +123,7 @@ jobs:
                   if (regex.test(content)) {
                     content = content.replace(regex, html);
                     fs.writeFileSync(file, content, 'utf-8');
-                    console.log(`Actualizado con éxito (${target.lang}): ${file}`);
+                    console.log(`Actualizado (${target.lang}): ${file}`);
                   }
                 }
               }
@@ -143,10 +140,11 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          if ! git diff --quiet && ! git diff --cached --quiet; then
+          git add profile/README.md profile/README.es.md README.md README.es.md 2>/dev/null || true
+          if [ -n "$(git status --porcelain)" ]; then
             git commit -m "chore(readme): auto-update featured projects [skip ci]"
             git push
+            echo "Cambios subidos correctamente al repositorio."
           else
-            echo "Sin cambios en los proyectos."
+            echo "No hay cambios nuevos que subir."
           fi
