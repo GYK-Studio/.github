@@ -385,14 +385,25 @@ Nuestro stack no es una lista cerrada. Elegimos herramientas según cada proyect
 </td>
 
 <td align="center" width="180">
-<a href="https://github.com/Plataer_">
-<img src="https://github.com/Plataer_.png" width="105" alt="Plataer_"/><br>
+<a href="https://github.com/Plataer">
+<img src="https://github.com/Plataer.png" width="105" alt="Plataer_"/><br>
 <strong>Plataer_</strong>
 </a>
 <br><br>
 <img src="https://img.shields.io/badge/MEMBER-238636?style=flat-square" alt="Member"/>
 <br>
-<sub>Full-Stack Developer · Mobile Developer</sub>
+<sub>Full-Stack Developer · App Developer</sub>
+</td>
+
+<td align="center" width="180">
+<a href="https://github.com/Anadisla">
+<img src="https://github.com/Anadisla.png" width="105" alt="Anadisla"/><br>
+<strong>Anadisla</strong>
+</a>
+<br><br>
+<img src="https://img.shields.io/badge/MEMBER-238636?style=flat-square" alt="Member"/>
+<br>
+<sub>Full-Stack Developer</sub>
 </td>
 
 </tr>
@@ -414,6 +425,17 @@ Nuestro stack no es una lista cerrada. Elegimos herramientas según cada proyect
 <a href="https://github.com/joelnatera113-cmd">
 <img src="https://github.com/joelnatera113-cmd.png" width="105" alt="joelnatera113-cmd"/><br>
 <strong>joelnatera113-cmd</strong>
+</a>
+<br><br>
+<img src="https://img.shields.io/badge/MEMBER-238636?style=flat-square" alt="Member"/>
+<br>
+<sub>Full-Stack Developer</sub>
+</td>
+
+<td align="center" width="180">
+<a href="https://github.com/josedarlingabreu">
+<img src="https://github.com/josedarlingabreu.png" width="105" alt="josedarlingabreu"/><br>
+<strong>josedarlingabreu</strong>
 </a>
 <br><br>
 <img src="https://img.shields.io/badge/MEMBER-238636?style=flat-square" alt="Member"/>
