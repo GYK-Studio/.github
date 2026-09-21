@@ -325,9 +325,49 @@ Si un repositorio aparece en GitHub como “forked from …”, lo clasificamos 
 ★ Destacados
 
 <!-- FEATURED:START -->
-<div align="center">
-  <p><em>⏳ Actualizando proyectos más activos...</em></p>
-</div>
+<table>
+<tr>
+<td width="50%" valign="top">
+<h3>🚀 <a href="https://github.com/GYK-Studio/Web-GYK-Studio">Web-GYK-Studio</a></h3>
+<p>Proyecto activo de GYK Studio.</p>
+<p>
+<img src="https://img.shields.io/github/stars/GYK-Studio/Web-GYK-Studio?style=flat-square&logo=github&color=1F6FEB" alt="Stars"/>
+<img src="https://img.shields.io/github/last-commit/GYK-Studio/Web-GYK-Studio?style=flat-square&color=8957E5" alt="Last Commit"/>
+<img src="https://img.shields.io/github/license/GYK-Studio/Web-GYK-Studio?style=flat-square&color=2EA043" alt="License"/>
+</p>
+<a href="https://github.com/GYK-Studio/Web-GYK-Studio">
+<img src="https://img.shields.io/badge/Ver%20Repositorio-181717?style=for-the-badge&logo=github&logoColor=white" alt="Ver Repositorio"/>
+</a>
+</td>
+<td width="50%" valign="top">
+<h3>🚀 <a href="https://github.com/GYK-Studio/NuvioWeb">NuvioWeb</a></h3>
+<p>web</p>
+<p>
+<img src="https://img.shields.io/github/stars/GYK-Studio/NuvioWeb?style=flat-square&logo=github&color=1F6FEB" alt="Stars"/>
+<img src="https://img.shields.io/github/last-commit/GYK-Studio/NuvioWeb?style=flat-square&color=8957E5" alt="Last Commit"/>
+<img src="https://img.shields.io/github/license/GYK-Studio/NuvioWeb?style=flat-square&color=2EA043" alt="License"/>
+</p>
+<a href="https://github.com/GYK-Studio/NuvioWeb">
+<img src="https://img.shields.io/badge/Ver%20Repositorio-181717?style=for-the-badge&logo=github&logoColor=white" alt="Ver Repositorio"/>
+</a>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<h3>🚀 <a href="https://github.com/GYK-Studio/self-host-M">self-host-M</a></h3>
+<p>Repository for the Nuvio self-hosted backend</p>
+<p>
+<img src="https://img.shields.io/github/stars/GYK-Studio/self-host-M?style=flat-square&logo=github&color=1F6FEB" alt="Stars"/>
+<img src="https://img.shields.io/github/last-commit/GYK-Studio/self-host-M?style=flat-square&color=8957E5" alt="Last Commit"/>
+<img src="https://img.shields.io/github/license/GYK-Studio/self-host-M?style=flat-square&color=2EA043" alt="License"/>
+</p>
+<a href="https://github.com/GYK-Studio/self-host-M">
+<img src="https://img.shields.io/badge/Ver%20Repositorio-181717?style=for-the-badge&logo=github&logoColor=white" alt="Ver Repositorio"/>
+</a>
+</td>
+<td width="50%" valign="top"></td>
+</tr>
+</table>
 <!-- FEATURED:END -->
 
 
