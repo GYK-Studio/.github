@@ -395,6 +395,17 @@ Our stack is not a closed list. We choose tools based on each project and keep a
 <sub>Full-Stack Developer · App Developer</sub>
 </td>
 
+<td align="center" width="180">
+<a href="https://github.com/Anadisla">
+<img src="https://github.com/Anadisla.png" width="105" alt="Anadisla"/><br>
+<strong>Anadisla</strong>
+</a>
+<br><br>
+<img src="https://img.shields.io/badge/MEMBER-238636?style=flat-square" alt="Member"/>
+<br>
+<sub>Full-Stack Developer</sub>
+</td>
+
 </tr>
 
 <tr>
@@ -425,17 +436,6 @@ Our stack is not a closed list. We choose tools based on each project and keep a
 <a href="https://github.com/josedarlingabreu">
 <img src="https://github.com/josedarlingabreu.png" width="105" alt="josedarlingabreu"/><br>
 <strong>josedarlingabreu</strong>
-</a>
-<br><br>
-<img src="https://img.shields.io/badge/MEMBER-238636?style=flat-square" alt="Member"/>
-<br>
-<sub>Full-Stack Developer</sub>
-</td>
-
-<td align="center" width="180">
-<a href="https://github.com/Anadisla">
-<img src="https://github.com/Anadisla.png" width="105" alt="Anadisla"/><br>
-<strong>Anadisla</strong>
 </a>
 <br><br>
 <img src="https://img.shields.io/badge/MEMBER-238636?style=flat-square" alt="Member"/>
