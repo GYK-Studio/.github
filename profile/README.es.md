@@ -325,61 +325,50 @@ Si un repositorio aparece en GitHub como “forked from …”, lo clasificamos 
 ★ Destacados
 
 <!-- FEATURED:START -->
-<div align="center">
-
-<table align="center" width="100%">
+<table>
 <tr>
-<td align="center" width="50%" valign="top">
-<h3>🚀 <a href="https://github.com/GYK-Studio/Web-GYK-Studio">Web-GYK-Studio</a></h3>
+<td width="100%" valign="top">
+🚀 <b><a href="https://github.com/GYK-Studio/Web-GYK-Studio">Web-GYK-Studio</a></b>
 Proyecto activo de GYK Studio.
-<br><br>
 <p>
 <img src="https://img.shields.io/github/stars/GYK-Studio/Web-GYK-Studio?style=flat-square&logo=github&color=1F6FEB" alt="Stars"/>
 <img src="https://img.shields.io/github/last-commit/GYK-Studio/Web-GYK-Studio?style=flat-square&color=8957E5" alt="Last Commit"/>
 <img src="https://img.shields.io/github/license/GYK-Studio/Web-GYK-Studio?style=flat-square&color=2EA043" alt="License"/>
 </p>
-<br>
 <a href="https://github.com/GYK-Studio/Web-GYK-Studio">
 <img src="https://img.shields.io/badge/Ver%20Repositorio-181717?style=for-the-badge&logo=github&logoColor=white" alt="Ver Repositorio"/>
 </a>
-<br><br>
 </td>
-<td align="center" width="50%" valign="top">
-<h3>🚀 <a href="https://github.com/GYK-Studio/NuvioWeb">NuvioWeb</a></h3>
+</tr>
+<tr>
+<td width="100%" valign="top">
+🎬 <b><a href="https://github.com/GYK-Studio/NuvioWeb">NuvioWeb</a></b>
 web
-<br><br>
 <p>
 <img src="https://img.shields.io/github/stars/GYK-Studio/NuvioWeb?style=flat-square&logo=github&color=1F6FEB" alt="Stars"/>
 <img src="https://img.shields.io/github/last-commit/GYK-Studio/NuvioWeb?style=flat-square&color=8957E5" alt="Last Commit"/>
 <img src="https://img.shields.io/github/license/GYK-Studio/NuvioWeb?style=flat-square&color=2EA043" alt="License"/>
 </p>
-<br>
 <a href="https://github.com/GYK-Studio/NuvioWeb">
 <img src="https://img.shields.io/badge/Ver%20Repositorio-181717?style=for-the-badge&logo=github&logoColor=white" alt="Ver Repositorio"/>
 </a>
-<br><br>
 </td>
 </tr>
 <tr>
-<td align="center" colspan="2" valign="top">
-<h3>🚀 <a href="https://github.com/GYK-Studio/self-host-M">self-host-M</a></h3>
+<td width="100%" valign="top">
+⚙️ <b><a href="https://github.com/GYK-Studio/self-host-M">self-host-M</a></b>
 Repository for the Nuvio self-hosted backend
-<br><br>
 <p>
 <img src="https://img.shields.io/github/stars/GYK-Studio/self-host-M?style=flat-square&logo=github&color=1F6FEB" alt="Stars"/>
 <img src="https://img.shields.io/github/last-commit/GYK-Studio/self-host-M?style=flat-square&color=8957E5" alt="Last Commit"/>
 <img src="https://img.shields.io/github/license/GYK-Studio/self-host-M?style=flat-square&color=2EA043" alt="License"/>
 </p>
-<br>
 <a href="https://github.com/GYK-Studio/self-host-M">
 <img src="https://img.shields.io/badge/Ver%20Repositorio-181717?style=for-the-badge&logo=github&logoColor=white" alt="Ver Repositorio"/>
 </a>
-<br><br>
 </td>
 </tr>
 </table>
-
-</div>
 <!-- FEATURED:END -->
 
 
