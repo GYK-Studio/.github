@@ -29,74 +29,77 @@ jobs:
           node - << 'NODE_SCRIPT'
           const fs = require('fs');
 
+          const PROJECT_META = {
+            'Web-GYK-Studio': {
+              title: 'Web GYK Studio',
+              icon: '🌐',
+              desc_en: 'Official web platform and digital hub for GYK Studio.',
+              desc_es: 'Plataforma web oficial y portal digital de GYK Studio.',
+              techs: ['Astro', 'TypeScript', 'Tailwind'],
+              colors: ['1F6FEB', '8957E5', '2EA043']
+            },
+            'NuvioWeb': {
+              title: 'Nuvio Web',
+              icon: '🎬',
+              desc_en: 'TV-first multimedia experience for browsers & Smart TVs.',
+              desc_es: 'Experiencia multimedia TV-first para navegadores y Smart TVs.',
+              techs: ['TV-First', 'JavaScript', 'Streaming'],
+              colors: ['8957E5', '1F6FEB', '2EA043']
+            },
+            'self-host-M': {
+              title: 'Nuvio Self-Hosted',
+              icon: '⚙️',
+              desc_en: 'Self-hosted backend infrastructure and APIs for Nuvio.',
+              desc_es: 'Infraestructura backend self-hosted y APIs para Nuvio.',
+              techs: ['Backend', 'PostgreSQL', 'Docker'],
+              colors: ['DB6D28', '1F6FEB', '2EA043']
+            }
+          };
+
           async function run() {
             const org = 'GYK-Studio';
-            const headers = {
-              'Accept': 'application/vnd.github.v3+json',
-              'User-Agent': 'Featured-Projects-Updater'
-            };
-            if (process.env.GH_TOKEN) {
-              headers['Authorization'] = 'token ' + process.env.GH_TOKEN;
-            }
+            const headers = { 'Accept': 'application/vnd.github.v3+json', 'User-Agent': 'Featured-Updater' };
+            if (process.env.GH_TOKEN) headers['Authorization'] = 'token ' + process.env.GH_TOKEN;
 
             const res = await fetch('https://api.github.com/orgs/' + org + '/repos?type=public&sort=pushed&direction=desc&per_page=100', { headers });
             if (!res.ok) throw new Error('Error API: ' + res.statusText);
             const repos = await res.json();
 
-            // Filtrar solo el repo especial .github
             const activeRepos = repos.filter(r => r.name !== '.github');
             const topProjects = activeRepos.slice(0, 4);
 
-            if (topProjects.length === 0) {
-              console.log('No se encontraron repositorios activos.');
-              return;
-            }
-
-            console.log('Proyectos seleccionados: ' + topProjects.map(p => p.name).join(', '));
-
-            function getIcon(name) {
-              const lower = name.toLowerCase();
-              if (lower.includes('nuvio') || lower.includes('tv')) return '🎬';
-              if (lower.includes('host') || lower.includes('api') || lower.includes('server')) return '⚙️';
-              return '🚀';
-            }
-
-            function renderCard(p, lang) {
+            function renderOpt1(projects, lang) {
               const isEs = lang === 'es';
-              const openRepoText = isEs ? 'Ver Repositorio' : 'Open Repository';
-              const noDescText = isEs ? 'Proyecto activo de GYK Studio.' : 'Active GYK Studio project.';
-              const desc = p.description || noDescText;
-              const icon = getIcon(p.name);
-              const topics = (p.topics || []).slice(0, 4)
-                .map(t => '<img src="https://img.shields.io/badge/' + encodeURIComponent(t) + '-1F6FEB?style=flat-square" alt="' + t + '"/>')
-                .join(' ');
+              const thProj = isEs ? 'Proyecto' : 'Project';
+              const thDesc = isEs ? 'Descripción' : 'Description';
+              const thStack = isEs ? 'Tecnologías' : 'Technologies';
+              const thAction = isEs ? 'Repositorio' : 'Repository';
+              const btnText = isEs ? 'Explorar ↗' : 'Explore ↗';
 
-              return [
-                '<tr>',
-                '<td width="100%" valign="top">',
-                '',
-                icon + ' <b><a href="' + p.html_url + '">' + p.name + '</a></b>',
-                '',
-                desc,
-                '',
-                '<p>',
-                '<img src="https://img.shields.io/github/stars/' + org + '/' + p.name + '?style=flat-square&logo=github&color=1F6FEB" alt="Stars"/>',
-                '<img src="https://img.shields.io/github/last-commit/' + org + '/' + p.name + '?style=flat-square&color=8957E5" alt="Last Commit"/>',
-                '<img src="https://img.shields.io/github/license/' + org + '/' + p.name + '?style=flat-square&color=2EA043" alt="License"/>',
-                '</p>',
-                topics ? '<p>' + topics + '</p>' : '',
-                '<a href="' + p.html_url + '">',
-                '<img src="https://img.shields.io/badge/' + encodeURIComponent(openRepoText) + '-181717?style=for-the-badge&logo=github&logoColor=white" alt="' + openRepoText + '"/>',
-                '</a>',
-                '',
-                '</td>',
-                '</tr>'
-              ].filter(Boolean).join('\n');
-            }
+              let rows = '';
+              for (const p of projects) {
+                const m = PROJECT_META[p.name] || {};
+                const title = m.title || p.name;
+                const icon = m.icon || '🚀';
+                const desc = isEs ? (m.desc_es || p.description || 'Proyecto de GYK Studio.') : (m.desc_en || p.description || 'GYK Studio project.');
+                const techs = m.techs || (p.language ? [p.language] : ['Open Source']);
+                const colors = m.colors || ['1F6FEB', '8957E5', '2EA043'];
 
-            function renderHTML(projects, lang) {
-              const rows = projects.map(p => renderCard(p, lang)).join('\n');
-              return '<!-- FEATURED:START -->\n<table>\n' + rows + '\n</table>\n<!-- FEATURED:END -->';
+                const techBadges = techs.map((t, idx) => `<img src="https://img.shields.io/badge/${encodeURIComponent(t)}-${colors[idx] || '1F6FEB'}?style=flat-square" alt="${t}"/>`).join(' ');
+
+                rows += `<tr>
+<td valign="middle"><b>${icon} <a href="${p.html_url}">${title}</a></b></td>
+<td valign="middle">${desc}</td>
+<td align="center" valign="middle">${techBadges}</td>
+<td align="center" valign="middle">
+<a href="${p.html_url}">
+<img src="https://img.shields.io/badge/${encodeURIComponent(btnText)}-181717?style=flat-square&logo=github&logoColor=white" alt="${btnText}"/>
+</a>
+</td>
+</tr>\n`;
+              }
+
+              return `<!-- FEATURED:START -->\n<table width="100%">\n<thead>\n<tr>\n<th align="left">${thProj}</th>\n<th align="left">${thDesc}</th>\n<th align="center">${thStack}</th>\n<th align="center">${thAction}</th>\n</tr>\n</thead>\n<tbody>\n${rows}</tbody>\n</table>\n<!-- FEATURED:END -->`;
             }
 
             const targets = [
@@ -105,26 +108,20 @@ jobs:
             ];
 
             const regex = /<!-- FEATURED:START -->([\s\S]*?)<!-- FEATURED:END -->/;
-
             for (const target of targets) {
-              const html = renderHTML(topProjects, target.lang);
+              const html = renderOpt1(topProjects, target.lang);
               for (const file of target.paths) {
                 if (fs.existsSync(file)) {
                   let content = fs.readFileSync(file, 'utf-8');
                   if (regex.test(content)) {
                     content = content.replace(regex, html);
                     fs.writeFileSync(file, content, 'utf-8');
-                    console.log('Actualizado (' + target.lang + '): ' + file);
                   }
                 }
               }
             }
           }
-
-          run().catch(err => {
-            console.error(err);
-            process.exit(1);
-          });
+          run().catch(err => { console.error(err); process.exit(1); });
           NODE_SCRIPT
 
       - name: Commit & Push changes
@@ -135,7 +132,4 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m "chore(readme): auto-update featured projects [skip ci]"
             git push
-            echo "Cambios subidos correctamente al repositorio."
-          else
-            echo "No hay cambios nuevos que subir."
           fi
