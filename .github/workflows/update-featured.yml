@@ -29,6 +29,7 @@ jobs:
           node - << 'NODE_SCRIPT'
           const fs = require('fs');
 
+          // Metadatos enriquecidos de los proyectos clave de GYK Studio
           const PROJECT_META = {
             'Web-GYK-Studio': {
               title: 'Web GYK Studio',
@@ -58,17 +59,24 @@ jobs:
 
           async function run() {
             const org = 'GYK-Studio';
-            const headers = { 'Accept': 'application/vnd.github.v3+json', 'User-Agent': 'Featured-Updater' };
-            if (process.env.GH_TOKEN) headers['Authorization'] = 'token ' + process.env.GH_TOKEN;
+            const headers = {
+              'Accept': 'application/vnd.github.v3+json',
+              'User-Agent': 'Featured-Updater'
+            };
+            if (process.env.GH_TOKEN) {
+              headers['Authorization'] = 'token ' + process.env.GH_TOKEN;
+            }
 
+            // Obtener repositorios ordenados por subidas / actividad reciente
             const res = await fetch('https://api.github.com/orgs/' + org + '/repos?type=public&sort=pushed&direction=desc&per_page=100', { headers });
             if (!res.ok) throw new Error('Error API: ' + res.statusText);
             const repos = await res.json();
 
+            // Filtrar el repositorio de configuración .github
             const activeRepos = repos.filter(r => r.name !== '.github');
             const topProjects = activeRepos.slice(0, 4);
 
-            function renderOpt1(projects, lang) {
+            function renderTable(projects, lang) {
               const isEs = lang === 'es';
               const thProj = isEs ? 'Proyecto' : 'Project';
               const thDesc = isEs ? 'Descripción' : 'Description';
@@ -85,21 +93,38 @@ jobs:
                 const techs = m.techs || (p.language ? [p.language] : ['Open Source']);
                 const colors = m.colors || ['1F6FEB', '8957E5', '2EA043'];
 
-                const techBadges = techs.map((t, idx) => `<img src="https://img.shields.io/badge/${encodeURIComponent(t)}-${colors[idx] || '1F6FEB'}?style=flat-square" alt="${t}"/>`).join(' ');
+                const techBadges = techs.map((t, idx) => {
+                  const color = colors[idx] || '1F6FEB';
+                  return '<img src="https://img.shields.io/badge/' + encodeURIComponent(t) + '-' + color + '?style=flat-square" alt="' + t + '"/>';
+                }).join(' ');
 
-                rows += `<tr>
-<td valign="middle"><b>${icon} <a href="${p.html_url}">${title}</a></b></td>
-<td valign="middle">${desc}</td>
-<td align="center" valign="middle">${techBadges}</td>
-<td align="center" valign="middle">
-<a href="${p.html_url}">
-<img src="https://img.shields.io/badge/${encodeURIComponent(btnText)}-181717?style=flat-square&logo=github&logoColor=white" alt="${btnText}"/>
-</a>
-</td>
-</tr>\n`;
+                rows += '<tr>\n' +
+                  '<td valign="middle"><b>' + icon + ' <a href="' + p.html_url + '">' + title + '</a></b></td>\n' +
+                  '<td valign="middle">' + desc + '</td>\n' +
+                  '<td align="center" valign="middle">' + techBadges + '</td>\n' +
+                  '<td align="center" valign="middle">\n' +
+                  '<a href="' + p.html_url + '">\n' +
+                  '<img src="https://img.shields.io/badge/' + encodeURIComponent(btnText) + '-181717?style=flat-square&logo=github&logoColor=white" alt="' + btnText + '"/>\n' +
+                  '</a>\n' +
+                  '</td>\n' +
+                  '</tr>\n';
               }
 
-              return `<!-- FEATURED:START -->\n<table width="100%">\n<thead>\n<tr>\n<th align="left">${thProj}</th>\n<th align="left">${thDesc}</th>\n<th align="center">${thStack}</th>\n<th align="center">${thAction}</th>\n</tr>\n</thead>\n<tbody>\n${rows}</tbody>\n</table>\n<!-- FEATURED:END -->`;
+              return '<!-- FEATURED:START -->\n' +
+                '<table width="100%">\n' +
+                '<thead>\n' +
+                '<tr>\n' +
+                '<th align="left">' + thProj + '</th>\n' +
+                '<th align="left">' + thDesc + '</th>\n' +
+                '<th align="center">' + thStack + '</th>\n' +
+                '<th align="center">' + thAction + '</th>\n' +
+                '</tr>\n' +
+                '</thead>\n' +
+                '<tbody>\n' +
+                rows +
+                '</tbody>\n' +
+                '</table>\n' +
+                '<!-- FEATURED:END -->';
             }
 
             const targets = [
@@ -108,20 +133,26 @@ jobs:
             ];
 
             const regex = /<!-- FEATURED:START -->([\s\S]*?)<!-- FEATURED:END -->/;
+
             for (const target of targets) {
-              const html = renderOpt1(topProjects, target.lang);
+              const html = renderTable(topProjects, target.lang);
               for (const file of target.paths) {
                 if (fs.existsSync(file)) {
                   let content = fs.readFileSync(file, 'utf-8');
                   if (regex.test(content)) {
                     content = content.replace(regex, html);
                     fs.writeFileSync(file, content, 'utf-8');
+                    console.log('Actualizado con éxito (' + target.lang + '): ' + file);
                   }
                 }
               }
             }
           }
-          run().catch(err => { console.error(err); process.exit(1); });
+
+          run().catch(err => {
+            console.error(err);
+            process.exit(1);
+          });
           NODE_SCRIPT
 
       - name: Commit & Push changes
@@ -132,4 +163,7 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m "chore(readme): auto-update featured projects [skip ci]"
             git push
+            echo "Cambios subidos correctamente al repositorio."
+          else
+            echo "No hay cambios nuevos que subir."
           fi
