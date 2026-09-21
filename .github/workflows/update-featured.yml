@@ -1,8 +1,8 @@
-name: Auto-Update Featured Project
+name: Auto-Update Featured Projects
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Se ejecuta diariamente a las 00:00 UTC
+    - cron: '0 0 * * *' # Se ejecuta diariamente a medianoche UTC
   workflow_dispatch:     # Permite ejecutarlo manualmente desde GitHub Actions
 
 permissions:
@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: 20
 
-      - name: Fetch and Update Featured Project
+      - name: Fetch and Update Featured Projects
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -31,76 +31,98 @@ jobs:
             const org = 'GYK-Studio';
             const headers = {
               'Accept': 'application/vnd.github.v3+json',
-              'User-Agent': 'Featured-Updater'
+              'User-Agent': 'Featured-Projects-Updater'
             };
             if (process.env.GH_TOKEN) {
               headers['Authorization'] = `token ${process.env.GH_TOKEN}`;
             }
 
-            // 1. Obtener los repositorios públicos de la organización
-            const res = await fetch(`https://api.github.com/orgs/${org}/repos?type=public&sort=pushed&per_page=100`, { headers });
+            // 1. Obtener los repositorios ordenados por subidas/commits recientes
+            const res = await fetch(`https://api.github.com/orgs/${org}/repos?type=public&sort=pushed&direction=desc&per_page=100`, { headers });
             if (!res.ok) throw new Error(`Error API: ${res.statusText}`);
             const repos = await res.json();
 
-            // Filtrar para ignorar forks y el repo especial .github
-            const nonForks = repos.filter(r => !r.fork && r.name !== '.github');
+            // Filtrar forks y el repositorio de configuración .github
+            const originalRepos = repos.filter(r => !r.fork && r.name !== '.github');
 
-            // 2. Prioridad: el repo que tenga el topic "featured" más recientemente actualizado.
-            // Si ninguno lo tiene, toma el último repo original actualizado.
-            let featured = nonForks.find(r => Array.isArray(r.topics) && r.topics.includes('featured'));
-            if (!featured) {
-              featured = nonForks[0];
-            }
+            // Tomar los 4 proyectos más activos
+            const topProjects = originalRepos.slice(0, 4);
 
-            if (!featured) {
-              console.log('No se encontró ningún repositorio elegible.');
+            if (topProjects.length === 0) {
+              console.log('No se encontraron repositorios originales.');
               return;
             }
 
-            console.log(`Proyecto destacado seleccionado: ${featured.name}`);
+            console.log(`Proyectos seleccionados: ${topProjects.map(p => p.name).join(', ')}`);
 
-            const topicsBadges = (featured.topics || [])
-              .filter(t => t !== 'featured')
-              .slice(0, 4)
-              .map(t => `<img src="https://img.shields.io/badge/${encodeURIComponent(t)}-1F6FEB?style=flat-square" alt="${t}"/>`)
-              .join('\n');
+            // Función para renderizar el bloque HTML en formato rejilla 2 columnas
+            function renderHTML(projects, lang = 'es') {
+              const isEs = lang === 'es';
+              const openRepoText = isEs ? 'Ver Repositorio' : 'Open Repository';
+              const noDescText = isEs ? 'Proyecto activo de GYK Studio.' : 'Active GYK Studio project.';
 
-            const newContent = `<!-- FEATURED:START -->
-          <table>
-          <tr>
-          <td width="100%" valign="top">
+              let rows = '';
+              for (let i = 0; i < projects.length; i += 2) {
+                const p1 = projects[i];
+                const p2 = projects[i + 1];
 
-          <h3>🎬 <a href="${featured.html_url}">${featured.name}</a></h3>
+                const renderCard = (p) => {
+                  if (!p) return '<td width="50%" valign="top"></td>';
+                  const desc = p.description || noDescText;
+                  const topics = (p.topics || []).slice(0, 3)
+                    .map(t => `<img src="https://img.shields.io/badge/${encodeURIComponent(t)}-1F6FEB?style=flat-square" alt="${t}"/>`)
+                    .join(' ');
 
-          ${featured.description || 'No description provided.'}
+                  return `
+          <td width="50%" valign="top">
+
+          <h3>🚀 <a href="${p.html_url}">${p.name}</a></h3>
+
+          ${desc}
 
           <p>
-          <img src="https://img.shields.io/github/stars/${org}/${featured.name}?style=flat-square&logo=github&color=1F6FEB" alt="Stars"/>
-          <img src="https://img.shields.io/github/last-commit/${org}/${featured.name}?style=flat-square&color=8957E5" alt="Last Commit"/>
-          <img src="https://img.shields.io/github/license/${org}/${featured.name}?style=flat-square&color=2EA043" alt="License"/>
+          <img src="https://img.shields.io/github/stars/${org}/${p.name}?style=flat-square&logo=github&color=1F6FEB" alt="Stars"/>
+          <img src="https://img.shields.io/github/last-commit/${org}/${p.name}?style=flat-square&color=8957E5" alt="Last Commit"/>
+          <img src="https://img.shields.io/github/license/${org}/${p.name}?style=flat-square&color=2EA043" alt="License"/>
           </p>
 
-          ${topicsBadges ? `<p>\n${topicsBadges}\n</p>` : ''}
+          ${topics ? `<p>${topics}</p>` : ''}
 
-          <a href="${featured.html_url}">
-          <img src="https://img.shields.io/badge/Open%20Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="Open ${featured.name}"/>
+          <a href="${p.html_url}">
+          <img src="https://img.shields.io/badge/${encodeURIComponent(openRepoText)}-181717?style=for-the-badge&logo=github&logoColor=white" alt="${openRepoText}"/>
           </a>
 
-          </td>
-          </tr>
-          </table>
-          <!-- FEATURED:END -->`;
+          </td>`;
+                };
 
-            // 3. Reemplazar el bloque en el README.md y README.es.md si existen
-            const files = ['profile/README.md', 'README.md', 'profile/README.es.md'];
-            for (const file of files) {
-              if (fs.existsSync(file)) {
-                let content = fs.readFileSync(file, 'utf-8');
-                const regex = /<!-- FEATURED:START -->([\s\S]*?)<!-- FEATURED:END -->/;
-                if (regex.test(content)) {
-                  content = content.replace(regex, newContent);
-                  fs.writeFileSync(file, content, 'utf-8');
-                  console.log(`Actualizado: ${file}`);
+                rows += `
+          <tr>
+          ${renderCard(p1)}
+          ${renderCard(p2)}
+          </tr>`;
+              }
+
+              return `<!-- FEATURED:START -->\n<table>${rows}\n</table>\n<!-- FEATURED:END -->`;
+            }
+
+            // 2. Actualizar archivos en inglés y español si existen
+            const targets = [
+              { paths: ['profile/README.md', 'README.md'], lang: 'en' },
+              { paths: ['profile/README.es.md', 'README.es.md'], lang: 'es' }
+            ];
+
+            const regex = /<!-- FEATURED:START -->([\s\S]*?)<!-- FEATURED:END -->/;
+
+            for (const target of targets) {
+              const html = renderHTML(topProjects, target.lang);
+              for (const file of target.paths) {
+                if (fs.existsSync(file)) {
+                  let content = fs.readFileSync(file, 'utf-8');
+                  if (regex.test(content)) {
+                    content = content.replace(regex, html);
+                    fs.writeFileSync(file, content, 'utf-8');
+                    console.log(`Actualizado (${target.lang}): ${file}`);
+                  }
                 }
               }
             }
@@ -118,8 +140,8 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           if ! git diff --quiet && ! git diff --cached --quiet; then
-            git commit -m "chore(readme): auto-update featured project"
+            git commit -m "chore(readme): auto-update most active projects"
             git push
           else
-            echo "Sin cambios en el proyecto destacado."
+            echo "Sin cambios en los proyectos destacados."
           fi
