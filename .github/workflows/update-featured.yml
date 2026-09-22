@@ -39,14 +39,13 @@ jobs:
               headers['Authorization'] = 'token ' + process.env.GH_TOKEN;
             }
 
-            // Obtener los repositorios de la organización ordenados por commits/actividad reciente
+            // Obtener repositorios ordenados por subidas / commits recientes
             const res = await fetch('https://api.github.com/orgs/' + org + '/repos?type=public&sort=pushed&direction=desc&per_page=100', { headers });
             if (!res.ok) throw new Error('Error API: ' + res.statusText);
             const repos = await res.json();
 
-            // Filtrar solo el repositorio de configuración .github
+            // Filtrar el repositorio de configuración .github
             const activeRepos = repos.filter(r => r.name !== '.github');
-            // Tomar los 4 proyectos con mayor actividad reciente
             const topProjects = activeRepos.slice(0, 4);
 
             if (topProjects.length === 0) {
@@ -56,64 +55,78 @@ jobs:
 
             console.log('Proyectos activos detectados: ' + topProjects.map(p => p.name).join(', '));
 
-            function renderTable(projects, lang) {
+            const FALLBACKS = {
+              'Web-GYK-Studio': {
+                desc_en: 'Official web platform and digital portal for GYK Studio.',
+                desc_es: 'Plataforma web oficial y portal digital de GYK Studio.',
+                tags: ['Astro', 'TypeScript', 'Web'],
+                colors: ['BC52EE', '3178C6', '1F6FEB']
+              },
+              'NuvioWeb': {
+                desc_en: 'A TV-first multimedia experience built for browsers and Smart TV platforms.',
+                desc_es: 'Una experiencia multimedia TV-first creada para navegadores y plataformas Smart TV.',
+                tags: ['TV-First', 'JavaScript', 'Streaming'],
+                colors: ['8957E5', 'F7DF1E', '2EA043']
+              },
+              'self-host-M': {
+                desc_en: 'Distributed backend infrastructure, database management and APIs for Nuvio.',
+                desc_es: 'Infraestructura backend self-hosted, gestión de base de datos y APIs para Nuvio.',
+                tags: ['Backend', 'PostgreSQL', 'Self-Hosted'],
+                colors: ['DB6D28', '4169E1', '2EA043']
+              }
+            };
+
+            function renderCards(projects, lang) {
               const isEs = lang === 'es';
-              const thProj = isEs ? 'Proyecto' : 'Project';
-              const thDesc = isEs ? 'Descripción' : 'Description';
-              const thStack = isEs ? 'Tecnologías' : 'Technologies';
-              const thAction = isEs ? 'Repositorio' : 'Repository';
-              const btnText = isEs ? 'Explorar ↗' : 'Explore ↗';
-              const fallbackDesc = isEs ? 'Proyecto activo de GYK Studio.' : 'Active GYK Studio project.';
+              const openText = isEs ? 'Ver Repositorio' : 'Open Repository';
+              const defaultDesc = isEs ? 'Proyecto activo de GYK Studio.' : 'Active GYK Studio project.';
 
-              const colors = ['1F6FEB', '8957E5', '2EA043', 'DB6D28'];
+              const cards = projects.map(p => {
+                const fb = FALLBACKS[p.name] || {};
 
-              let rows = '';
-              for (const p of projects) {
-                // Descripción directamente del repositorio en GitHub
-                const desc = (p.description && p.description.trim().length > 3) ? p.description.trim() : fallbackDesc;
-
-                // Tecnologías dinámicas: Lenguaje principal + Topics configurados en GitHub
-                const tags = [];
-                if (p.language) tags.push(p.language);
-                if (Array.isArray(p.topics)) {
-                  for (const t of p.topics) {
-                    if (!tags.includes(t)) tags.push(t);
-                  }
+                // Si la descripción en GitHub tiene sustancia (>15 caracteres), usarla; si no, usar fallback
+                let desc = (p.description && p.description.trim().length > 15) ? p.description.trim() : null;
+                if (!desc) {
+                  desc = isEs ? (fb.desc_es || defaultDesc) : (fb.desc_en || defaultDesc);
                 }
-                if (tags.length === 0) tags.push('Open Source');
 
-                const techBadges = tags.slice(0, 3).map((t, idx) => {
-                  const color = colors[idx % colors.length];
-                  return '<img src="https://img.shields.io/badge/' + encodeURIComponent(t) + '-' + color + '?style=flat-square" alt="' + t + '"/>';
+                let tags = fb.tags;
+                let colors = fb.colors || ['1F6FEB', '8957E5', '2EA043'];
+                if (!tags) {
+                  tags = [];
+                  if (p.language) tags.push(p.language);
+                  if (Array.isArray(p.topics)) {
+                    for (const t of p.topics) {
+                      if (!tags.includes(t)) tags.push(t);
+                    }
+                  }
+                  if (tags.length === 0) tags.push('Open Source');
+                }
+
+                const techBadges = tags.slice(0, 4).map((t, idx) => {
+                  const c = colors[idx % colors.length] || '1F6FEB';
+                  return '<img src="https://img.shields.io/badge/' + encodeURIComponent(t) + '-' + c + '?style=flat-square" alt="' + t + '"/>';
                 }).join(' ');
 
-                rows += '<tr>\n' +
-                  '<td valign="middle"><b>🚀 <a href="' + p.html_url + '">' + p.name + '</a></b></td>\n' +
-                  '<td valign="middle">' + desc + '</td>\n' +
-                  '<td align="center" valign="middle">' + techBadges + '</td>\n' +
-                  '<td align="center" valign="middle">\n' +
+                return '<table>\n' +
+                  '<tr>\n' +
+                  '<td width="100%" valign="top">\n\n' +
                   '<a href="' + p.html_url + '">\n' +
-                  '<img src="https://img.shields.io/badge/' + encodeURIComponent(btnText) + '-181717?style=flat-square&logo=github&logoColor=white" alt="' + btnText + '"/>\n' +
-                  '</a>\n' +
+                  '<img align="right" src="https://img.shields.io/badge/' + encodeURIComponent(openText) + '-181717?style=for-the-badge&logo=github&logoColor=white" alt="' + openText + '"/>\n' +
+                  '</a>\n\n' +
+                  '<p><font size="+1"><b><a href="' + p.html_url + '">' + p.name + '</a></b></font></p>\n\n' +
+                  desc + '\n\n' +
+                  '<br><br>\n\n' +
+                  '<p>\n' +
+                  techBadges + '\n' +
+                  '<img src="https://img.shields.io/github/last-commit/' + org + '/' + p.name + '?style=flat-square&color=21262D&labelColor=161B22&logo=git&logoColor=white" alt="Last Commit"/>\n' +
+                  '</p>\n\n' +
                   '</td>\n' +
-                  '</tr>\n';
-              }
+                  '</tr>\n' +
+                  '</table>';
+              }).join('\n\n<br>\n\n');
 
-              return '<!-- FEATURED:START -->\n' +
-                '<table width="100%">\n' +
-                '<thead>\n' +
-                '<tr>\n' +
-                '<th align="left">' + thProj + '</th>\n' +
-                '<th align="left">' + thDesc + '</th>\n' +
-                '<th align="center">' + thStack + '</th>\n' +
-                '<th align="center">' + thAction + '</th>\n' +
-                '</tr>\n' +
-                '</thead>\n' +
-                '<tbody>\n' +
-                rows +
-                '</tbody>\n' +
-                '</table>\n' +
-                '<!-- FEATURED:END -->';
+              return '<!-- FEATURED:START -->\n' + cards + '\n<!-- FEATURED:END -->';
             }
 
             const targets = [
@@ -124,7 +137,7 @@ jobs:
             const regex = /<!-- FEATURED:START -->([\s\S]*?)<!-- FEATURED:END -->/;
 
             for (const target of targets) {
-              const html = renderTable(topProjects, target.lang);
+              const html = renderCards(topProjects, target.lang);
               for (const file of target.paths) {
                 if (fs.existsSync(file)) {
                   let content = fs.readFileSync(file, 'utf-8');
