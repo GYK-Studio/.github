@@ -29,34 +29,6 @@ jobs:
           node - << 'NODE_SCRIPT'
           const fs = require('fs');
 
-          // Metadatos enriquecidos de los proyectos clave de GYK Studio
-          const PROJECT_META = {
-            'Web-GYK-Studio': {
-              title: 'Web GYK Studio',
-              icon: '🌐',
-              desc_en: 'Official web platform and digital hub for GYK Studio.',
-              desc_es: 'Plataforma web oficial y portal digital de GYK Studio.',
-              techs: ['Astro', 'TypeScript', 'Tailwind'],
-              colors: ['1F6FEB', '8957E5', '2EA043']
-            },
-            'NuvioWeb': {
-              title: 'Nuvio Web',
-              icon: '🎬',
-              desc_en: 'TV-first multimedia experience for browsers & Smart TVs.',
-              desc_es: 'Experiencia multimedia TV-first para navegadores y Smart TVs.',
-              techs: ['TV-First', 'JavaScript', 'Streaming'],
-              colors: ['8957E5', '1F6FEB', '2EA043']
-            },
-            'self-host-M': {
-              title: 'Nuvio Self-Hosted',
-              icon: '⚙️',
-              desc_en: 'Self-hosted backend infrastructure and APIs for Nuvio.',
-              desc_es: 'Infraestructura backend self-hosted y APIs para Nuvio.',
-              techs: ['Backend', 'PostgreSQL', 'Docker'],
-              colors: ['DB6D28', '1F6FEB', '2EA043']
-            }
-          };
-
           async function run() {
             const org = 'GYK-Studio';
             const headers = {
@@ -67,14 +39,22 @@ jobs:
               headers['Authorization'] = 'token ' + process.env.GH_TOKEN;
             }
 
-            // Obtener repositorios ordenados por subidas / actividad reciente
+            // Obtener los repositorios de la organización ordenados por commits/actividad reciente
             const res = await fetch('https://api.github.com/orgs/' + org + '/repos?type=public&sort=pushed&direction=desc&per_page=100', { headers });
             if (!res.ok) throw new Error('Error API: ' + res.statusText);
             const repos = await res.json();
 
-            // Filtrar el repositorio de configuración .github
+            // Filtrar solo el repositorio de configuración .github
             const activeRepos = repos.filter(r => r.name !== '.github');
+            // Tomar los 4 proyectos con mayor actividad reciente
             const topProjects = activeRepos.slice(0, 4);
+
+            if (topProjects.length === 0) {
+              console.log('No se encontraron repositorios activos.');
+              return;
+            }
+
+            console.log('Proyectos activos detectados: ' + topProjects.map(p => p.name).join(', '));
 
             function renderTable(projects, lang) {
               const isEs = lang === 'es';
@@ -83,23 +63,32 @@ jobs:
               const thStack = isEs ? 'Tecnologías' : 'Technologies';
               const thAction = isEs ? 'Repositorio' : 'Repository';
               const btnText = isEs ? 'Explorar ↗' : 'Explore ↗';
+              const fallbackDesc = isEs ? 'Proyecto activo de GYK Studio.' : 'Active GYK Studio project.';
+
+              const colors = ['1F6FEB', '8957E5', '2EA043', 'DB6D28'];
 
               let rows = '';
               for (const p of projects) {
-                const m = PROJECT_META[p.name] || {};
-                const title = m.title || p.name;
-                const icon = m.icon || '🚀';
-                const desc = isEs ? (m.desc_es || p.description || 'Proyecto de GYK Studio.') : (m.desc_en || p.description || 'GYK Studio project.');
-                const techs = m.techs || (p.language ? [p.language] : ['Open Source']);
-                const colors = m.colors || ['1F6FEB', '8957E5', '2EA043'];
+                // Descripción directamente del repositorio en GitHub
+                const desc = (p.description && p.description.trim().length > 3) ? p.description.trim() : fallbackDesc;
 
-                const techBadges = techs.map((t, idx) => {
-                  const color = colors[idx] || '1F6FEB';
+                // Tecnologías dinámicas: Lenguaje principal + Topics configurados en GitHub
+                const tags = [];
+                if (p.language) tags.push(p.language);
+                if (Array.isArray(p.topics)) {
+                  for (const t of p.topics) {
+                    if (!tags.includes(t)) tags.push(t);
+                  }
+                }
+                if (tags.length === 0) tags.push('Open Source');
+
+                const techBadges = tags.slice(0, 3).map((t, idx) => {
+                  const color = colors[idx % colors.length];
                   return '<img src="https://img.shields.io/badge/' + encodeURIComponent(t) + '-' + color + '?style=flat-square" alt="' + t + '"/>';
                 }).join(' ');
 
                 rows += '<tr>\n' +
-                  '<td valign="middle"><b>' + icon + ' <a href="' + p.html_url + '">' + title + '</a></b></td>\n' +
+                  '<td valign="middle"><b>🚀 <a href="' + p.html_url + '">' + p.name + '</a></b></td>\n' +
                   '<td valign="middle">' + desc + '</td>\n' +
                   '<td align="center" valign="middle">' + techBadges + '</td>\n' +
                   '<td align="center" valign="middle">\n' +
