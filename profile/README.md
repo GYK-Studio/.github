@@ -336,9 +336,9 @@ If a repository appears on GitHub as “forked from …”, we classify it as a 
 </thead>
 <tbody>
 <tr>
-<td valign="middle"><b>🌐 <a href="https://github.com/GYK-Studio/Web-GYK-Studio">Web GYK Studio</a></b></td>
-<td valign="middle">Official web platform and digital hub for GYK Studio.</td>
-<td align="center" valign="middle"><img src="https://img.shields.io/badge/Astro-1F6FEB?style=flat-square" alt="Astro"/> <img src="https://img.shields.io/badge/TypeScript-8957E5?style=flat-square" alt="TypeScript"/> <img src="https://img.shields.io/badge/Tailwind-2EA043?style=flat-square" alt="Tailwind"/></td>
+<td valign="middle"><b>🚀 <a href="https://github.com/GYK-Studio/Web-GYK-Studio">Web-GYK-Studio</a></b></td>
+<td valign="middle">Active GYK Studio project.</td>
+<td align="center" valign="middle"><img src="https://img.shields.io/badge/Astro-1F6FEB?style=flat-square" alt="Astro"/></td>
 <td align="center" valign="middle">
 <a href="https://github.com/GYK-Studio/Web-GYK-Studio">
 <img src="https://img.shields.io/badge/Explore%20%E2%86%97-181717?style=flat-square&logo=github&logoColor=white" alt="Explore ↗"/>
@@ -346,9 +346,9 @@ If a repository appears on GitHub as “forked from …”, we classify it as a 
 </td>
 </tr>
 <tr>
-<td valign="middle"><b>🎬 <a href="https://github.com/GYK-Studio/NuvioWeb">Nuvio Web</a></b></td>
-<td valign="middle">TV-first multimedia experience for browsers & Smart TVs.</td>
-<td align="center" valign="middle"><img src="https://img.shields.io/badge/TV-First-8957E5?style=flat-square" alt="TV-First"/> <img src="https://img.shields.io/badge/JavaScript-1F6FEB?style=flat-square" alt="JavaScript"/> <img src="https://img.shields.io/badge/Streaming-2EA043?style=flat-square" alt="Streaming"/></td>
+<td valign="middle"><b>🚀 <a href="https://github.com/GYK-Studio/NuvioWeb">NuvioWeb</a></b></td>
+<td valign="middle">Active GYK Studio project.</td>
+<td align="center" valign="middle"><img src="https://img.shields.io/badge/JavaScript-1F6FEB?style=flat-square" alt="JavaScript"/></td>
 <td align="center" valign="middle">
 <a href="https://github.com/GYK-Studio/NuvioWeb">
 <img src="https://img.shields.io/badge/Explore%20%E2%86%97-181717?style=flat-square&logo=github&logoColor=white" alt="Explore ↗"/>
@@ -356,9 +356,9 @@ If a repository appears on GitHub as “forked from …”, we classify it as a 
 </td>
 </tr>
 <tr>
-<td valign="middle"><b>⚙️ <a href="https://github.com/GYK-Studio/self-host-M">Nuvio Self-Hosted</a></b></td>
-<td valign="middle">Self-hosted backend infrastructure and APIs for Nuvio.</td>
-<td align="center" valign="middle"><img src="https://img.shields.io/badge/Backend-DB6D28?style=flat-square" alt="Backend"/> <img src="https://img.shields.io/badge/PostgreSQL-1F6FEB?style=flat-square" alt="PostgreSQL"/> <img src="https://img.shields.io/badge/Docker-2EA043?style=flat-square" alt="Docker"/></td>
+<td valign="middle"><b>🚀 <a href="https://github.com/GYK-Studio/self-host-M">self-host-M</a></b></td>
+<td valign="middle">Repository for the Nuvio self-hosted backend</td>
+<td align="center" valign="middle"><img src="https://img.shields.io/badge/PLpgSQL-1F6FEB?style=flat-square" alt="PLpgSQL"/></td>
 <td align="center" valign="middle">
 <a href="https://github.com/GYK-Studio/self-host-M">
 <img src="https://img.shields.io/badge/Explore%20%E2%86%97-181717?style=flat-square&logo=github&logoColor=white" alt="Explore ↗"/>
