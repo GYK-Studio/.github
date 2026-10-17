@@ -8,31 +8,31 @@
   [English](https://github.com/GYK-Studio/.github/blob/main/profile/README.md) · [Organización](https://github.com/GYK-Studio) · [Repositorios](https://github.com/orgs/GYK-Studio/repositories)
 </div>
 
-## Quiénes somos
-Somos un equipo full-stack enfocado en convertir ideas en productos reales.
+## Sobre GYK Studio
+Somos un equipo full-stack enfocado en convertir ideas en productos útiles.
 
 ## Qué construimos
-- 🌐 Productos web full-stack
+- 🌐 Plataformas web full-stack
 - 📱 Apps móviles para Android e iOS
-- 🖥️ Software de escritorio y herramientas de sistema
+- 🖥️ Herramientas y utilidades de escritorio
 - ⚙️ APIs backend y servicios distribuidos
 - ☁️ Infraestructura, DevOps y automatización
 - 🎮 Proyectos de gaming y experimentales
 
-## Stack
+## Tecnologías
 TypeScript/JavaScript · React/Next.js · Flutter/Dart · Kotlin · Node.js · Python · Java · Docker · Linux · GitHub Actions
 
-## Repositorios
-- **Proyectos originales**: software creado por GYK Studio
-- **Forks**: proyectos externos adaptados para fixes, pruebas o contribuciones
+## Cómo organizamos los repositorios
+- **Proyectos originales**: software creado y mantenido por GYK Studio
+- **Forks**: repositorios externos adaptados para fixes, pruebas o contribuciones
 
 > Si GitHub marca un repositorio como “forked from …”, lo tratamos como fork.
 
 ## Cómo trabajamos
-1. **Idea** — definimos qué vale la pena construir.
-2. **Build** — implementamos, probamos e iteramos.
-3. **Review** — revisamos comportamiento, código y diseño.
-4. **Ship** — publicamos y seguimos mejorando.
+1. **Descubrir** — identificamos problemas que vale la pena resolver.
+2. **Construir** — implementamos, probamos e iteramos rápido.
+3. **Revisar** — validamos comportamiento, calidad y diseño.
+4. **Publicar** — lanzamos, monitoreamos y mejoramos.
 
 ## Equipo
 - [@Kokuuuuuun](https://github.com/Kokuuuuuun)
@@ -52,7 +52,7 @@ Flujo básico:
 3. Commit de cambios
 4. Abrir pull request
 
-Prefijos de commit comunes:
+Prefijos comunes de commit:
 - `feat` nueva funcionalidad
 - `fix` corrección de error
 - `docs` documentación
