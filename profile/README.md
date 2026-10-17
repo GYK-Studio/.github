@@ -20,10 +20,11 @@ We are a full-stack team focused on turning ideas into useful products.
 - 🎮 Gaming and experimental projects
 
 ## Tech stack
-- **Web Frontend**: React, Next.js, TypeScript, JavaScript
-- **Mobile**: Flutter, Dart, Kotlin, Swift
-- **Backend**: Node.js, Python, Java, Go, C#, Rust, PHP
-- **Data and scripting**: SQL, Bash
+- **Web Frontend**: React, Next.js, TypeScript, JavaScript, Vue, Angular
+- **Mobile**: Flutter, Dart, Kotlin, Swift, React Native
+- **Backend**: Node.js, Python, Java, Go, C#, Rust, PHP, Ruby
+- **Data and scripting**: SQL, Bash, PowerShell
+- **Desktop and systems**: C++, C
 - **Infra and DevOps**: Docker, Linux, GitHub Actions
 
 ## How we organize repositories
