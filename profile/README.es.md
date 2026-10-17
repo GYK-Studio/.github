@@ -21,8 +21,9 @@ Somos un equipo full-stack enfocado en convertir ideas en productos útiles.
 
 ## Stack tecnológico
 - **Frontend Web**: React, Next.js, TypeScript, JavaScript
-- **Mobile**: Flutter, Dart, Kotlin
-- **Backend**: Node.js, Python, Java
+- **Mobile**: Flutter, Dart, Kotlin, Swift
+- **Backend**: Node.js, Python, Java, Go, C#, Rust, PHP
+- **Datos y scripting**: SQL, Bash
 - **Infra y DevOps**: Docker, Linux, GitHub Actions
 
 ## Cómo organizamos los repositorios
