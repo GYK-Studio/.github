@@ -20,9 +20,13 @@ Somos un equipo full-stack enfocado en convertir ideas en productos útiles.
 - 🎮 Proyectos de gaming y experimentales
 
 ## Stack tecnológico
-- **Frontend Web**: React, Next.js, TypeScript, JavaScript
-- **Mobile**: Flutter, Dart, Kotlin
-- **Backend**: Node.js, Python, Java
+- **Frontend Web**: React, Next.js, TypeScript, JavaScript, Vue, Angular, Svelte
+- **Mobile**: Flutter, Dart, Kotlin, Swift, React Native, Objective-C
+- **Backend**: Node.js, Python, Java, Go, C#, Rust, PHP, Ruby, Elixir, Scala, Clojure
+- **Datos y scripting**: SQL, Bash, PowerShell, R, Julia, Perl
+- **Desktop y sistemas**: C++, C, Zig, Electron, Tauri, Qt, .NET
+- **Desarrollo de juegos**: Unity, Unreal Engine, Godot, Minecraft (Spigot, Paper, Fabric, Forge)
+- **Herramientas, servicios y bases de datos**: Git, GitHub, GitHub CLI (gh), PostgreSQL, MySQL, SQLite, MongoDB, Redis, Firebase
 - **Infra y DevOps**: Docker, Linux, GitHub Actions
 
 ## Cómo organizamos los repositorios
