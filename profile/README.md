@@ -8,14 +8,18 @@
   [Español](https://github.com/GYK-Studio/.github/blob/main/profile/README.es.md) · [GitHub Org](https://github.com/GYK-Studio) · [Repositories](https://github.com/orgs/GYK-Studio/repositories)
 </div>
 
-## What we do
-- Full-stack products from idea to deployment
-- Mobile and desktop apps
-- Backend APIs and distributed services
-- Infrastructure, automation, DevOps and tooling
-- Gaming and experimental projects
+## Who we are
+We are a full-stack team focused on turning ideas into real products.
 
-## Tech we use
+## What we build
+- 🌐 Full-stack web products
+- 📱 Mobile apps for Android and iOS
+- 🖥️ Desktop software and system tools
+- ⚙️ Backend APIs and distributed services
+- ☁️ Infrastructure, DevOps and automation
+- 🎮 Gaming and experimental projects
+
+## Tech stack
 TypeScript/JavaScript · React/Next.js · Flutter/Dart · Kotlin · Node.js · Python · Java · Docker · Linux · GitHub Actions
 
 ## Repositories
@@ -23,6 +27,12 @@ TypeScript/JavaScript · React/Next.js · Flutter/Dart · Kotlin · Node.js · P
 - **Forks**: external projects adapted for fixes, experiments or contributions
 
 > If GitHub marks a repository as “forked from …”, we treat it as a fork.
+
+## How we work
+1. **Idea** — decide what is worth building.
+2. **Build** — implement, test and iterate.
+3. **Review** — review behavior, code and design.
+4. **Ship** — release and keep improving.
 
 ## Team
 - [@Kokuuuuuun](https://github.com/Kokuuuuuun)
@@ -34,7 +44,21 @@ TypeScript/JavaScript · React/Next.js · Flutter/Dart · Kotlin · Node.js · P
 - [@josedarlingabreu](https://github.com/josedarlingabreu)
 
 ## Contributing
-Open an issue or pull request when the target repository allows contributions.
+Open an issue or pull request when the target repository accepts contributions.
+
+Basic flow:
+1. Fork
+2. Create branch
+3. Commit changes
+4. Open pull request
+
+Common commit prefixes:
+- `feat` new feature
+- `fix` bug fix
+- `docs` documentation
+- `refactor` refactor
+- `test` tests
+- `chore` maintenance
 
 ## Security
 If you find a vulnerability, use the repository security process instead of posting sensitive details publicly.

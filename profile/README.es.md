@@ -8,12 +8,16 @@
   [English](https://github.com/GYK-Studio/.github/blob/main/profile/README.md) · [Organización](https://github.com/GYK-Studio) · [Repositorios](https://github.com/orgs/GYK-Studio/repositories)
 </div>
 
-## Qué hacemos
-- Productos full-stack de idea a producción
-- Apps móviles y de escritorio
-- APIs backend y servicios distribuidos
-- Infraestructura, automatización, DevOps y tooling
-- Proyectos de gaming y experimentales
+## Quiénes somos
+Somos un equipo full-stack enfocado en convertir ideas en productos reales.
+
+## Qué construimos
+- 🌐 Productos web full-stack
+- 📱 Apps móviles para Android e iOS
+- 🖥️ Software de escritorio y herramientas de sistema
+- ⚙️ APIs backend y servicios distribuidos
+- ☁️ Infraestructura, DevOps y automatización
+- 🎮 Proyectos de gaming y experimentales
 
 ## Stack
 TypeScript/JavaScript · React/Next.js · Flutter/Dart · Kotlin · Node.js · Python · Java · Docker · Linux · GitHub Actions
@@ -23,6 +27,12 @@ TypeScript/JavaScript · React/Next.js · Flutter/Dart · Kotlin · Node.js · P
 - **Forks**: proyectos externos adaptados para fixes, pruebas o contribuciones
 
 > Si GitHub marca un repositorio como “forked from …”, lo tratamos como fork.
+
+## Cómo trabajamos
+1. **Idea** — definimos qué vale la pena construir.
+2. **Build** — implementamos, probamos e iteramos.
+3. **Review** — revisamos comportamiento, código y diseño.
+4. **Ship** — publicamos y seguimos mejorando.
 
 ## Equipo
 - [@Kokuuuuuun](https://github.com/Kokuuuuuun)
@@ -35,6 +45,20 @@ TypeScript/JavaScript · React/Next.js · Flutter/Dart · Kotlin · Node.js · P
 
 ## Contribuir
 Abre un issue o pull request cuando el repositorio destino acepte contribuciones.
+
+Flujo básico:
+1. Fork
+2. Crear rama
+3. Commit de cambios
+4. Abrir pull request
+
+Prefijos de commit comunes:
+- `feat` nueva funcionalidad
+- `fix` corrección de error
+- `docs` documentación
+- `refactor` refactorización
+- `test` pruebas
+- `chore` mantenimiento
 
 ## Seguridad
 Si encuentras una vulnerabilidad, usa el proceso de seguridad del repositorio y evita publicar datos sensibles en público.
