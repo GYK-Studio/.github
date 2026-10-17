@@ -19,8 +19,11 @@ We are a full-stack team focused on turning ideas into useful products.
 - ☁️ Infrastructure, DevOps, and automation
 - 🎮 Gaming and experimental projects
 
-## Tech we use
-TypeScript/JavaScript · React/Next.js · Flutter/Dart · Kotlin · Node.js · Python · Java · Docker · Linux · GitHub Actions
+## Tech stack
+- **Web Frontend**: React, Next.js, TypeScript, JavaScript
+- **Mobile**: Flutter, Dart, Kotlin
+- **Backend**: Node.js, Python, Java
+- **Infra and DevOps**: Docker, Linux, GitHub Actions
 
 ## How we organize repositories
 - **Original projects**: software created and maintained by GYK Studio
@@ -59,6 +62,11 @@ Common commit prefixes:
 - `refactor` refactor
 - `test` tests
 - `chore` maintenance
+
+## What we want to improve and add
+- Standardize baseline docs in each repository (`README`, setup, and quick usage).
+- Add status badges (CI, coverage, or releases) where relevant.
+- Publish more contribution examples and templates for clearer onboarding.
 
 ## Security
 If you find a vulnerability, use the repository security process and avoid sharing sensitive details publicly.
