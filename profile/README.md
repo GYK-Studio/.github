@@ -3,36 +3,36 @@
   <br/>
   <img src="https://avatars.githubusercontent.com/u/191543244?s=200&v=4" width="110" alt="GYK Studio logo"/>
 
-  **We build practical software across web, mobile, desktop, backend and cloud.**
+  **We build practical software across web, mobile, desktop, backend, and cloud.**
 
   [Español](https://github.com/GYK-Studio/.github/blob/main/profile/README.es.md) · [GitHub Org](https://github.com/GYK-Studio) · [Repositories](https://github.com/orgs/GYK-Studio/repositories)
 </div>
 
-## Who we are
-We are a full-stack team focused on turning ideas into real products.
+## About GYK Studio
+We are a full-stack team focused on turning ideas into useful products.
 
 ## What we build
-- 🌐 Full-stack web products
+- 🌐 Full-stack web platforms
 - 📱 Mobile apps for Android and iOS
-- 🖥️ Desktop software and system tools
+- 🖥️ Desktop tools and utilities
 - ⚙️ Backend APIs and distributed services
-- ☁️ Infrastructure, DevOps and automation
+- ☁️ Infrastructure, DevOps, and automation
 - 🎮 Gaming and experimental projects
 
-## Tech stack
+## Tech we use
 TypeScript/JavaScript · React/Next.js · Flutter/Dart · Kotlin · Node.js · Python · Java · Docker · Linux · GitHub Actions
 
-## Repositories
-- **Original projects**: software created by GYK Studio
-- **Forks**: external projects adapted for fixes, experiments or contributions
+## How we organize repositories
+- **Original projects**: software created and maintained by GYK Studio
+- **Forks**: external repositories adapted for fixes, experiments, or contributions
 
 > If GitHub marks a repository as “forked from …”, we treat it as a fork.
 
 ## How we work
-1. **Idea** — decide what is worth building.
-2. **Build** — implement, test and iterate.
-3. **Review** — review behavior, code and design.
-4. **Ship** — release and keep improving.
+1. **Discover** — identify problems worth solving.
+2. **Build** — implement, test, and iterate quickly.
+3. **Review** — validate behavior, quality, and design.
+4. **Ship** — release, monitor, and improve.
 
 ## Team
 - [@Kokuuuuuun](https://github.com/Kokuuuuuun)
@@ -43,14 +43,14 @@ TypeScript/JavaScript · React/Next.js · Flutter/Dart · Kotlin · Node.js · P
 - [@joelnatera113-cmd](https://github.com/joelnatera113-cmd)
 - [@josedarlingabreu](https://github.com/josedarlingabreu)
 
-## Contributing
+## Get involved
 Open an issue or pull request when the target repository accepts contributions.
 
 Basic flow:
 1. Fork
-2. Create branch
-3. Commit changes
-4. Open pull request
+2. Create a branch
+3. Commit your changes
+4. Open a pull request
 
 Common commit prefixes:
 - `feat` new feature
@@ -61,7 +61,7 @@ Common commit prefixes:
 - `chore` maintenance
 
 ## Security
-If you find a vulnerability, use the repository security process instead of posting sensitive details publicly.
+If you find a vulnerability, use the repository security process and avoid sharing sensitive details publicly.
 
 ---
 
